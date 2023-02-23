@@ -2,105 +2,219 @@
 <html lang="en">
 
 <head>
-  <!-- basic -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- mobile metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <!-- site metas -->
-  <title>CoBsine</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!-- bootstrap css -->
-  <link rel="stylesheet" type="text/css" href="<?= PATH_URL ?>/css/bootstrap.min.css">
-  <!-- style css -->
-  <link rel="stylesheet" type="text/css" href="<?= PATH_URL ?>/css/style.css">
-  <!-- Responsive-->
-  <link rel="stylesheet" href="<?= PATH_URL ?>/css/responsive.css">
-  <!-- fevicon -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
-  <!-- Scrollbar Custom CSS -->
-  <link rel="stylesheet" href="<?= PATH_URL ?>/css/jquery.mCustomScrollbar.min.css">
-  <!-- Tweaks for older IEs-->
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- owl stylesheets -->
-  <link rel="stylesheet" href="<?= PATH_URL ?>/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="<?= PATH_URL ?>/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rapid Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="<?=BASE_PATH?>/public/images/favicon.png" rel="icon">
+  <link href="<?=BASE_PATH?>/public/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="<?=BASE_PATH?>/public/plugins/aos/aos.css" rel="stylesheet">
+  <link href="<?=BASE_PATH?>/public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=BASE_PATH?>/public/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?=BASE_PATH?>/public/plugins/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?=BASE_PATH?>/public/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="<?=BASE_PATH?>/public/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Rapid - v4.10.0
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-  <div class="header_section">
-    <?php include_once 'navbar.php'; ?>
-  </div>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Rapid</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="<?=BASE_PATH?>/public/images/logo.png" alt="" class="img-fluid"></a>-->
+      <?php
+      include('navbar.php');
+      ?>
+
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="<?=BASE_PATH?>/public/images/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
 
 
   <section class="content">
     <?= @$content ?>
   </section>
 
-  <!-- footer section start -->
-  <div class="footer_section layout_padding">
-    <div class="container">
-      <div class="location_main">
-        <div class="location_text"><img src="<?=PATH_URL?>images/map-icon.png"><span class="padding_left_10"><a href="#">Location</a></span></div>
-        <div class="location_text center"><img src="<?=PATH_URL?>images/call-icon.png"><span class="padding_left_10"><a href="#">Call ; 01 1234567890</a></span></div>
-        <div class="location_text right"><img src="<?=PATH_URL?>images/mail-icon.png"><span class="padding_left_10"><a href="#">demo@gmail.com</a></span></div>
-      </div>
-      <div class="footer_section_2">
+
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
         <div class="row">
-          <div class="col-lg-4">
-            <h2 class="footer_taital">About</h2>
-            <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
-          </div>
-          <div class="col-lg-4">
-            <h2 class="footer_taital">Services Link</h2>
-            <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
-          </div>
-          <div class="col-lg-4">
-            <h2 class="footer_taital">Subscribe</h2>
-            <input type="text" class="Enter_text" placeholder="Enter Your Email" name="Enter Your Email">
-            <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-            <div class="social_icon">
-              <ul>
-                <li><a href="#"><img src="<?=PATH_URL?>images/fb-icon.png"></a></li>
-                <li><a href="#"><img src="<?=PATH_URL?>images/twitter-icon.png"></a></li>
-                <li><a href="#"><img src="<?=PATH_URL?>images/linkedin-icon.png"></a></li>
-                <li><a href="#"><img src="<?=PATH_URL?>images/instagram-icon.png"></a></li>
-                <li><a href="#"><img src="<?=PATH_URL?>images/youtub-icon.png"></a></li>
-              </ul>
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+              <div class="col-sm-6">
+
+                <div class="footer-info">
+                  <h3>Rapid</h3>
+                  <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                </div>
+
+                <div class="footer-newsletter">
+                  <h4>Our Newsletter</h4>
+                  <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                  <form action="" method="post">
+                    <input type="email" name="email"><input type="submit" value="Subscribe">
+                  </form>
+                </div>
+
+              </div>
+
+              <div class="col-sm-6">
+                <div class="footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-links">
+                  <h4>Contact Us</h4>
+                  <p>
+                    A108 Adam Street <br>
+                    New York, NY 535022<br>
+                    United States <br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                </div>
+
+                <div class="social-links">
+                  <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+              </div>
+
             </div>
+
           </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+
+              <h4>Send us a message</h4>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </div>
-  </div>
-  <!-- footer section end -->
-  <!-- copyright section start -->
-  <div class="copyright_section">
+
     <div class="container">
-      <p class="copyright_text">Copyright 2020 All Rights Reserved.<a href="https://html.design"> Free html Templates</a></p>
+      <div class="copyright">
+        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-  </div>
-  <!-- copyright section end -->
-  <!-- Javascript files-->
-  <script src="<?= PATH_URL ?>/js/jquery.min.js"></script>
-  <script src="<?= PATH_URL ?>/js/popper.min.js"></script>
-  <script src="<?= PATH_URL ?>/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= PATH_URL ?>/js/jquery-3.0.0.min.js"></script>
-  <script src="<?= PATH_URL ?>/js/plugin.js"></script>
-  <!-- sidebar -->
-  <script src="<?= PATH_URL ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="<?= PATH_URL ?>/js/custom.js"></script>
-  <!-- javascript -->
-  <script src="<?= PATH_URL ?>/js/owl.carousel.js"></script>
-  <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="<?=BASE_PATH?>/public/plugins/purecounter/purecounter_vanilla.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/aos/aos.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/glightbox/js/glightbox.min.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="<?=BASE_PATH?>/public/plugins/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?=BASE_PATH?>/public/js/main.js"></script>
+
 </body>
 
 </html>
