@@ -3,6 +3,9 @@
 $controllers = array(
   'home' => ['home', 'user'],
   'sample' => ['home', 'error', 'edit'],
+  'news' => ['home', 'detail'],
+
+
 
 ); 
 
