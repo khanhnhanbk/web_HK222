@@ -42,34 +42,43 @@ function upload($field, $config = array())
     return $name;
 }
 
-function escape($str)
+function escape($string)
 {
-    return mysqli_real_escape_string(DB::getInstance(), $str);
+    $string = strip_tags($string);
+    $string = mysqli_real_escape_string(DB::getInstance(), $string);
+
+    return $string;
 }
 
-function login($username, $password)
+function helper_login($email, $password)
 {
+    $email = escape($email);
+    $password = escape($password);
+
+    $password = md5($password);
+    
     $conn = DB::getInstance();
-    $sql = "SELECT * FROM user WHERE username=? and `password`=?";
+    $sql = "SELECT * FROM users WHERE email=? and `password`=?";
 
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("ss", $username, $password);
+    $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $res = $stmt->get_result();
-    if($res) {
+    // if length of result is 1
+    if ($res->num_rows == 1) {
         $res = $res->fetch_assoc();
-        if(! isBanned($res["banned"])) {
+        if (!isBanned($res["banned"])) {
             $_SESSION["auth"] = true;
             $_SESSION["user"] = $res;
-            header("location: index.php");
+            header("location: /home");
             exit();
-        }else {
-            header("location: ?controller=pages&action=page_403");
+        } else {
+            header("location: /pages/banned");
             exit();
         }
-    }else {
-        echo '<script>alert("Sải tên đăng nhập hoặc mật khẩu")</script>';
+    } else {
+        echo '<script>alert("Something went wrong")</script>';
     }
 }
 

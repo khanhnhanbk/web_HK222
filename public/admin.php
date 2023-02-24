@@ -1,6 +1,11 @@
 <?php
 session_start();
 define('BASE_PATH', '../');
+
+// middleware
+require_once BASE_PATH . 'middleware/auth.php';
+require_once BASE_PATH . 'middleware/admin.php';
+
 require_once BASE_PATH . 'lib/connection.php';
 require_once BASE_PATH . 'lib/config.php';
 require_once BASE_PATH . 'lib/helper.php';

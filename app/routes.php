@@ -4,9 +4,7 @@ $controllers = array(
   'home' => ['home', 'user'],
   'sample' => ['home', 'error', 'edit'],
   'news' => ['home', 'detail'],
-
-
-
+  'authorize' => ['login', 'register', 'logout'],
 ); 
 
 // default controller and action is SampleController and home
