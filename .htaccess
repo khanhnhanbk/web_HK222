@@ -8,9 +8,7 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 RewriteRule ^admin(/.*)?$ public/admin.php?url=$1 [QSA,L]
-
-# Rewrite all other requests to public/index.php with url parameters
-
 RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+
 
 Options All -Indexes
