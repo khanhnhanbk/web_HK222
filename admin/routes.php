@@ -1,22 +1,23 @@
 <?php
-// Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
+// Controller => Action
 $controllers = array(
-  'pages' => ['home', 'error'],
-); 
+    'sample' => ['home', 'error', 'edit'],
+    'dashboard' => ['home'],
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Nếu các tham số nhận được từ URL không hợp lệ (không thuộc list controller và action có thể gọi
-// thì trang báo lỗi sẽ được gọi ra.
+
+);
+
+// default controller and action is SampleController and home
 if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) {
-  $controller = 'pages';
-  $action = 'error';
+    $controller = 'page';
+    $action = 'error';
 }
 
-// Nhúng file định nghĩa controller vào để có thể dùng được class định nghĩa trong file đó
-include_once(ADMIN_PATH.'controllers/' . $controller . '_controller.php');
 
-//  Tạo ra tên controller class từ các giá trị lấy được từ URL sau đó gọi ra để hiển thị trả về cho người dùng.
-$klass = str_replace('_', '', ucwords($controller, '_')) . 'Controller'; 
-$controller = new $klass;
+// echo ADMIN_PATH . 'controllers/' .  ucfirst($controller) . 'Controller.php';
+include_once(ADMIN_PATH . 'controllers/' .  ucfirst($controller) . 'Controller.php');
+// create an instance of the controller
+$classname = ucfirst($controller) . 'Controller';
+$controller = new $classname;
 $controller->$action();
