@@ -17,4 +17,11 @@ class AdminUserModel extends BaseModel
         $stmt->execute();
         return $stmt->insert_id;
     }
+    public function ban($id)
+    {
+        $query = "UPDATE users SET role = -1 WHERE id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+    }
 }

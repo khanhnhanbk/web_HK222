@@ -3,7 +3,7 @@
 $controllers = array(
     'sample' => ['home', 'error', 'edit'],
     'dashboard' => ['home'],
-    'user' => ['home', 'create', 'store', 'edit', 'update', 'delete'],
+    'user' => ['home', 'create', 'store', 'edit', 'update', 'delete','ban'],
 
 
 );

@@ -10,13 +10,18 @@ class UserController extends BaseController
   }
   public function home()
   {
-    $users = $this->userModel->getAll();
+    $users = $this->userModel->getBy(['role' => 0]);
     $data = array('users' => $users);
     $this->render('home', $data);
   }
-  public function edit($id)
-  {
-    
 
+  public function ban()
+  {
+    echo "hello: " . $_POST['id'];
+    if (isset($_POST['btn-banUser'])) {
+      $id = $_POST['id'];
+      $this->userModel->ban($id);
+      header('Location: /admin/user/home');
+    }
   }
 }

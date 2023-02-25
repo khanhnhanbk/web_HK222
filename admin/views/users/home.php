@@ -1,9 +1,3 @@
-<?php
-echo "<pre>";
-print_r($users);
-echo "</pre>";
-?>
-
 <div class="row">
     <div class="col-12">
         <div class="card mb-4">
@@ -44,14 +38,11 @@ echo "</pre>";
                                         <span class="badge badge-sm bg-gradient-success">Online</span>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <!-- edit button -->
-                                        <a href="/admin/user/edit/<?= $user['id'] ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                            <i class="fas fa-user-edit"></i>
-                                        </a>
                                         <!-- ban button -->
-                                        <a href="/admin/user/ban/<?= $user['id'] ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Ban user">
-                                            <i class="fas fa-user-slash"></i>
-                                        </a>
+                                        <form action="/admin/user/ban" method="post">
+                                            <input type="hidden" name="id" value="<?=$user['id'];?>">
+                                            <button type="submit" class="btn btn-sm btn-danger" name="btn-banUser">Ban</button>
+                                        </form>
                                     </td>
                                 </tr>
 
