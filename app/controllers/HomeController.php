@@ -15,7 +15,7 @@ class HomeController extends BaseController
   public function user()
   {
     $userModel = $this->model('User');
-    $user = $userModel->all();
+    $user = $userModel->getAll();
 
     $this->render('user', ['user' => $user]);
   }

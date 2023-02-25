@@ -8,7 +8,7 @@ class AuthorizeController extends BaseController
     $this->folder = 'authorizes';
     // create new variable
 
-    $this->user = $this->model('Users');
+    $this->user = $this->model('UserModel');
   }
 
   public function login()
@@ -99,7 +99,7 @@ class AuthorizeController extends BaseController
 
       $password = md5($password);
 
-      $user = $this->user->create([
+      $this->user->create([
         'name' => $name,
         'email' => $email,
         'password' => $password,

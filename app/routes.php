@@ -18,4 +18,8 @@ include_once(USER_PATH.'controllers/' .  ucfirst($controller) . 'Controller.php'
 // create an instance of the controller
 $classname = ucfirst($controller). 'Controller';
 $controller = new $classname;
-$controller->$action();
+if (!empty($params)) {
+  call_user_func_array(array($controller, $action), $params);
+} else {
+  $controller->$action();
+}
