@@ -16,9 +16,4 @@ if (isset($_GET['url'])) {
     $controller = 'sample';
     $action = 'home';
 }
-
-
-
-// echo "controller: $controller <br>";
-// echo "action: $action <br>";
 require_once USER_PATH  . "routes.php";

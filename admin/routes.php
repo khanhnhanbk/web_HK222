@@ -3,7 +3,7 @@
 $controllers = array(
     'sample' => ['home', 'error', 'edit'],
     'dashboard' => ['home'],
-
+    'user' => ['home', 'create', 'store', 'edit', 'update', 'delete','ban'],
 
 
 );
@@ -20,4 +20,10 @@ include_once(ADMIN_PATH . 'controllers/' .  ucfirst($controller) . 'Controller.p
 // create an instance of the controller
 $classname = ucfirst($controller) . 'Controller';
 $controller = new $classname;
-$controller->$action();
+// call the action with the parameters
+if (!empty($params)) {
+    call_user_func_array(array($controller, $action), $params);
+} else {
+    $controller->$action();
+}
+

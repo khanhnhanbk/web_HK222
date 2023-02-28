@@ -10,21 +10,21 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?=BASE_PATH?>/public/images/favicon.png" rel="icon">
-  <link href="<?=BASE_PATH?>/public/images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?=PATH_URL?>images/favicon.png" rel="icon">
+  <link href="<?=PATH_URL?>images/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?=BASE_PATH?>/public/plugins/aos/aos.css" rel="stylesheet">
-  <link href="<?=BASE_PATH?>/public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?=BASE_PATH?>/public/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<?=BASE_PATH?>/public/plugins/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="<?=BASE_PATH?>/public/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>plugins/aos/aos.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>plugins/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?=BASE_PATH?>/public/css/style.css" rel="stylesheet">
+  <link href="<?=PATH_URL?>css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Rapid - v4.10.0
@@ -42,7 +42,7 @@
 
       <h1 class="logo me-auto"><a href="index.html">Rapid</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="<?=BASE_PATH?>/public/images/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo me-auto"><img src="<?=PATH_URL?>images/logo.png" alt="" class="img-fluid"></a>-->
       <?php
       include('navbar.php');
       ?>
@@ -68,14 +68,13 @@
         </div>
 
         <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="<?=BASE_PATH?>/public/images/intro-img.svg" alt="" class="img-fluid">
+          <img src="<?=PATH_URL?>images/intro-img.svg" alt="" class="img-fluid">
         </div>
       </div>
 
     </div>
   </section><!-- End Hero -->
-
-
+  
   <section class="content">
     <?= @$content ?>
   </section>
@@ -204,16 +203,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?=BASE_PATH?>/public/plugins/purecounter/purecounter_vanilla.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/aos/aos.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/glightbox/js/glightbox.min.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/swiper/swiper-bundle.min.js"></script>
-  <script src="<?=BASE_PATH?>/public/plugins/php-email-form/validate.js"></script>
+  <script src="<?=PATH_URL?>plugins/purecounter/purecounter_vanilla.js"></script>
+  <script src="<?=PATH_URL?>plugins/aos/aos.js"></script>
+  <script src="<?=PATH_URL?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=PATH_URL?>plugins/glightbox/js/glightbox.min.js"></script>
+  <script src="<?=PATH_URL?>plugins/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?=PATH_URL?>plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="<?=PATH_URL?>plugins/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?=BASE_PATH?>/public/js/main.js"></script>
+  <script src="<?=PATH_URL?>js/main.js"></script>
 
 </body>
 
