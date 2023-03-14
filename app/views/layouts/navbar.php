@@ -1,9 +1,15 @@
 
 <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
+<<<<<<< Updated upstream
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/aboutus#about">About</a></li>
           <li><a class="nav-link scrollto" href="/news">News</a></li>
+=======
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link<?php if($this->controller === 'sample' && $this->action === 'news') echo ' scrollto active'; else echo ' scrollto'; ?>" href="/news">News</a></li>
+>>>>>>> Stashed changes
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>

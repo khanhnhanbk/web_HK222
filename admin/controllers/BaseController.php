@@ -4,12 +4,12 @@ class BaseController
 {
     protected $viewsPath = ADMIN_PATH . 'views/'; // base path to views
     protected $folder; // subfolder of views
-
+    private $userModel;
     public function render(string $view, array $data = [], string $layout = null)
     {
         // Set the full path to the view file
         $viewPath = $this->viewsPath . $this->getViewFolder() . '/' . $view . '.php';
-
+        $this->userModel=$this->model('AdminUserModel');
         // Check if the view file exists
         if (!file_exists($viewPath)) {
             return $this->showErrorPage();
@@ -60,5 +60,9 @@ class BaseController
     {
         require_once(ADMIN_PATH . 'models/' . $model . '.php');
         return new $model();
+    }
+    public function getById($table,$id){
+        return $this->userModel->getById($table,$id);
+
     }
 }
