@@ -31,4 +31,14 @@ class AdminUserModel extends BaseModel
         return $res;
 
     }
+    public function insert($table,$row){
+        $columns = array();
+        $values = array();
+        foreach ($row as $key => $value) {
+        $columns[] = $key;
+        $values[] = mysqli_real_escape_string($this->conn, $value);
+        }
+        $sql = "INSERT INTO $table (" . implode(",", $columns) . ") VALUES ('" . implode("','", $values) . "')";
+        return mysqli_query($this->conn, $sql);
+    }
 }

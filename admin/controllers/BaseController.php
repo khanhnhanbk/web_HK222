@@ -65,4 +65,8 @@ class BaseController
         return $this->userModel->getById($table,$id);
 
     }
+    public function insert($table,$row){
+        return $this->userModel->insert($table,$row);
+
+    }
 }
