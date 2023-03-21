@@ -1,16 +1,16 @@
 <?php
 // Controller => Action
 $controllers = array(
-    'sample' => ['home', 'error', 'edit'],
+    'sample' => ['home', 'error', 'edit','news'],
     'dashboard' => ['home'],
     'user' => ['home', 'create', 'store', 'edit', 'update', 'delete','ban'],
-
+    'homeedit' => ['home']
 
 );
 
 // default controller and action is SampleController and home
 if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) {
-    $controller = 'page';
+    $controller = 'dashboard';
     $action = 'error';
 }
 

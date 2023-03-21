@@ -39,7 +39,4 @@ class BaseModel
         return $res->fetch_all(MYSQLI_ASSOC);
     }
     // need override
-    public function create()
-    {
-    }
 }

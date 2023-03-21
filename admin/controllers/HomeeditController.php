@@ -1,10 +1,15 @@
 <?php
-require_once(USER_PATH . 'controllers/BaseController.php');
-class SampleController extends BaseController
+require_once(ADMIN_PATH . 'controllers/BaseController.php');
+class HomeeditController extends BaseController
+
 {
+  private $userModel;
+  private $table;
   function __construct()
   {
-    $this->folder = 'sample';
+    $this->folder = 'homeedits';
+    $this->table = 'courses';
+    $this->userModel = $this->model('AdminUserModel');
   }
 
   public function home()
@@ -15,8 +20,9 @@ class SampleController extends BaseController
         ['id' => 2, 'name' => "Product 2", 'price' => 2000, 'image' => "https://picsum.photos/200/300"],
         ['id' => 3, 'name' => "Product 3", 'price' => 3000, 'image' => "https://picsum.photos/200/300"],
       ];
-    $data = array('products' => $products);*/
-    $this->render('home');//, $data);
+    $data = array('products' => $products);
+    $this->render('home', $data);*/
+    $this->render('home');
   }
 
   public function error()
@@ -27,4 +33,8 @@ class SampleController extends BaseController
   {
     $this->render('edit');
   }
+  /*public function getById($id){
+    return  $this->userModel->getById($this->table,$id);
+  }*/
+
 }
