@@ -195,20 +195,11 @@
             <div class="row">
                 <?php
                     // Database connection
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "12345";
-                    $dbname = "btl_web";
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-
-                    // Check connection
-                    if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    }
+                  
 
                     // Query to get records with displayed attribute of 1
-                    $sql = "SELECT * FROM courses WHERE displayed=1";
-                    $result = $conn->query($sql);
+                    
+                    $result = $this->getDisplayedCourses();
 
                     // Loop through the result set and add a new div for each record
 
@@ -232,7 +223,7 @@
                         </div>
                     </div>';
                     }
-                    $conn->close();
+                    
                 ?>
 
             </div>
