@@ -10,7 +10,7 @@ class UserModel extends BaseModel
 
   public function create(array $data = [])
   {
-    $query = "INSERT INTO users (name, email, password, role) VALUES (?,?,?,?)";
+    $query = "INSERT INTO users (username, email, password, role) VALUES (?,?,?,?)";
     $stmt = $this->conn->prepare($query);
     $stmt->bind_param("sssi", ...array_values($data));
     $stmt->execute();

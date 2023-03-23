@@ -16,7 +16,7 @@
                 <form action="/authorize/register" method="post">
                     <!-- name -->
                     <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="User name" required>
                     </div>
                     <div class="form-group mt-3">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>

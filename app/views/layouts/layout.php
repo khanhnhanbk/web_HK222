@@ -10,21 +10,21 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?=PATH_URL?>images/logo.png" rel="icon">
-  <link href="<?=PATH_URL?>images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= PATH_URL ?>images/logo.png" rel="icon">
+  <link href="<?= PATH_URL ?>images/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?=PATH_URL?>plugins/aos/aos.css" rel="stylesheet">
-  <link href="<?=PATH_URL?>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?=PATH_URL?>plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<?=PATH_URL?>plugins/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="<?=PATH_URL?>plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>plugins/aos/aos.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>plugins/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?=PATH_URL?>css/style.css" rel="stylesheet">
+  <link href="<?= PATH_URL ?>css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Rapid - v4.10.0
@@ -36,14 +36,12 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto">
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html" class="logo me-auto"><img src="<?=PATH_URL?>images/logo.png" alt="" class="img-fluid"></a>
-      </h1>
+      <h1 class="logo me-auto"><a href="index.html">Rapid</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="<?= PATH_URL ?>images/logo.png" alt="" class="img-fluid"></a>-->
       <?php
       include('navbar.php');
       ?>
@@ -57,31 +55,55 @@
 
     </div>
   </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="clearfix">
-    <div class="container d-flex h-100">
-      <div class="row justify-content-center align-self-center" data-aos="fade-up">
-        <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
-          <div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    <div class="container-fluid p-0 pb-5 mb-5">
+      <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#header-carousel" data-slide-to="1"></li>
+          <li data-target="#header-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="min-height: 300px;">
+            <img class="position-relative w-100" src="public/images/user_home/carousel-1.jpg" style="min-height: 300px; object-fit: cover;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+              <div class="p-5" style="width: 100%; max-width: 900px;">
+                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
+                <h1 class="display-3 text-white mb-md-4">Best Education From Your Home</h1>
+                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="min-height: 300px;">
+            <img class="position-relative w-100" src="public/images/user_home/carousel-2.jpg" style="min-height: 300px; object-fit: cover;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+              <div class="p-5" style="width: 100%; max-width: 900px;">
+                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
+                <h1 class="display-3 text-white mb-md-4">Best Online Learning Platform</h1>
+                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="min-height: 300px;">
+            <img class="position-relative w-100" src="public/images/user_home/carousel-3.jpg" style="min-height: 300px; object-fit: cover;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+              <div class="p-5" style="width: 100%; max-width: 900px;">
+                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
+                <h1 class="display-3 text-white mb-md-4">New Way To Learn From Home</h1>
+                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="<?=PATH_URL?>images/intro-img.svg" alt="" class="img-fluid">
-        </div>
       </div>
-
     </div>
-  </section><!-- End Hero -->
-  
+  </section>
   <section class="content">
     <?= @$content ?>
   </section>
 
 
-  
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="section-bg">
     <div class="footer-top">
@@ -204,16 +226,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?=PATH_URL?>plugins/purecounter/purecounter_vanilla.js"></script>
-  <script src="<?=PATH_URL?>plugins/aos/aos.js"></script>
-  <script src="<?=PATH_URL?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?=PATH_URL?>plugins/glightbox/js/glightbox.min.js"></script>
-  <script src="<?=PATH_URL?>plugins/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?=PATH_URL?>plugins/swiper/swiper-bundle.min.js"></script>
-  <script src="<?=PATH_URL?>plugins/php-email-form/validate.js"></script>
+  <script src="<?= PATH_URL ?>plugins/purecounter/purecounter_vanilla.js"></script>
+  <script src="<?= PATH_URL ?>plugins/aos/aos.js"></script>
+  <script src="<?= PATH_URL ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= PATH_URL ?>plugins/glightbox/js/glightbox.min.js"></script>
+  <script src="<?= PATH_URL ?>plugins/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?= PATH_URL ?>plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="<?= PATH_URL ?>plugins/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?=PATH_URL?>js/main.js"></script>
+  <script src="<?= PATH_URL ?>js/main.js"></script>
 
 </body>
 

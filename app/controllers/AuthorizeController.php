@@ -31,7 +31,7 @@ class AuthorizeController extends BaseController
           $_SESSION["auth"] = true;
           $_SESSION["user"] = array(
             'id' => $user['id'],
-            'name' => $user['name'],
+            'username' => $user['username'],
             'email' => $user['email'],
             'role' => $user['role'],
           );
@@ -100,7 +100,7 @@ class AuthorizeController extends BaseController
       $password = md5($password);
 
       $this->user->create([
-        'name' => $name,
+        'username' => $name,
         'email' => $email,
         'password' => $password,
         'role' => $role

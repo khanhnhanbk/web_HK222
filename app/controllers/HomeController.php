@@ -9,7 +9,7 @@ class HomeController extends BaseController
 
   public function home()
   {
-    $this->render('home',[],'user_home_layout');
+    $this->render('home');
   }
 
   public function user()

@@ -56,7 +56,7 @@
 
     </div>
   </header><!-- End Header -->
-  
+  <!-- contain -->
   <section class="content">
     <?= @$content ?>
   </section>

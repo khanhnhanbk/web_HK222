@@ -6,39 +6,20 @@ class AdminUserModel extends BaseModel
     public function __construct()
     {
         parent::__construct();
+        $this->table = 'users';
     }
 
-    public function create($table,array $data = [])
+    public function ban($table, $id)
     {
-        $query = "INSERT INTO " . $table ."(name, email, password, role) VALUES (?,?,?,?)";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("sssi", ...array_values($data));
-        $stmt->execute();
-        return $stmt->insert_id;
+        $sql = "UPDATE $table SET role = -1 WHERE id = $id";
+        $this->conn->query($sql);
     }
-    public function ban($table,$id)
+    public function getById($id)
     {
-        $query = "UPDATE users SET role = -1 WHERE id = ?";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
+        $sql = "SELECT * FROM users JOIN user_info ON users.id = user_info.user_id WHERE users.id = $id";
+        $result = $this->conn->query($sql);
+        return $result->fetch_assoc();
     }
-    public function getById($table,$id){
-        $query = "SELECT * FROM " . ($table) . " WHERE id = " . $id;
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        $res = $stmt->get_result();
-        return $res;
+    
 
-    }
-    public function insert($table,$row){
-        $columns = array();
-        $values = array();
-        foreach ($row as $key => $value) {
-        $columns[] = $key;
-        $values[] = mysqli_real_escape_string($this->conn, $value);
-        }
-        $sql = "INSERT INTO $table (" . implode(",", $columns) . ") VALUES ('" . implode("','", $values) . "')";
-        return mysqli_query($this->conn, $sql);
-    }
 }

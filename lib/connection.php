@@ -14,8 +14,8 @@ class DB
 
         $servername = "localhost";
         $username = "root";
-        $password = "12345";
-        $dbname = "btl_web"; 
+        $password = "";
+        $dbname = "btl_web_v2"; 
         
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
       self::$instance = new mysqli($servername, $username, $password, $dbname);

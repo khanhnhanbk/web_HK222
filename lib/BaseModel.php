@@ -10,7 +10,7 @@ class BaseModel
     }
     public function __destruct()
     {
-        $this->conn->close();
+
     }
     public function getAll()
     {

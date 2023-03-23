@@ -27,4 +27,14 @@ class UserController extends BaseController
       header('Location: /admin/user/home');
     }
   }
+  public function detail()
+  {
+    if (isset($_POST['detail-user-btn'])) {
+      $id = $_POST['id'];
+      $result = $this->userModel->getById($id);
+      $user = $result;
+      $data = array('user' => $user);
+      $this->render('detail', $data);
+    }
+  }
 }
