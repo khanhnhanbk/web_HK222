@@ -9,7 +9,6 @@ class BaseController
     {
         // Set the full path to the view file
         $viewPath = $this->viewsPath . $this->getViewFolder() . '/' . $view . '.php';
-        $this->userModel=$this->model('AdminUserModel');
         // Check if the view file exists
         if (!file_exists($viewPath)) {
             return $this->showErrorPage();

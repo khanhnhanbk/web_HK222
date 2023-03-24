@@ -20,8 +20,6 @@ class AuthorizeController extends BaseController
       $password = escape($_POST['password']);
 
       $password = md5($password);
-      // echo $email;
-      // echo $password;
       $user = $this->user->getBy(['email' => $email, 'password' => $password]);
 
       if (count($user)  == 1) {

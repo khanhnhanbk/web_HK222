@@ -1,17 +1,16 @@
 <?php 
 require_once(BASE_PATH  . 'lib/BaseModel.php');
 
-class AdminUserModel extends BaseModel
+class UserModel extends BaseModel
 {
     public function __construct()
     {
         parent::__construct();
-        $this->table = 'users';
     }
 
-    public function ban($table, $id)
+    public function ban($id)
     {
-        $sql = "UPDATE $table SET role = -1 WHERE id = $id";
+        $sql = "UPDATE users SET role = -1 WHERE id = $id";
         $this->conn->query($sql);
     }
     public function getById($id)
