@@ -1,11 +1,12 @@
 <?php
 // Controller => Action
 $controllers = array(
-    'sample' => ['home', 'error', 'edit','news'],
-    'dashboard' => ['home'],
-    'user' => ['home', 'create', 'store', 'edit', 'update', 'delete','ban','detail'],
-    'homeedit' => ['home']
-
+    'dashboard' => ['home', 'error'],
+    'category' => ['home', 'add', 'edit', 'delete', 'detail'],
+    'course' => ['home', 'add', 'edit', 'delete', 'detail'],
+    'user' => ['home',  'detail', 'block', 'unblock'],
+    'enroll' => ['home', 'detail', 'approve', 'reject'],
+    'setting' => ['home', 'about' ],
 );
 
 // default controller and action is SampleController and home
