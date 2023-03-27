@@ -2,7 +2,7 @@
 // Controller => Action
 $controllers = array(
     'dashboard' => ['home', 'error'],
-    'category' => ['home', 'add', 'edit', 'delete', 'detail'],
+    'subject' => ['home', 'add', 'edit', 'delete', 'detail'],
     'course' => ['home', 'add', 'edit', 'delete', 'detail'],
     'user' => ['home',  'detail', 'block', 'unblock'],
     'enroll' => ['home', 'detail', 'approve', 'reject'],

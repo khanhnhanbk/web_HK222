@@ -2,11 +2,10 @@
 // Controller => Action
 $controllers = array(
   'home' => ['home', 'error'],
-  'course' => ['home', 'catalog', 'detail'],
+  'course' => ['home', 'subject', 'detail'],
   'authorize' => ['login', 'register', 'logout'],
   'user' => ['home', 'profile', 'update'],
   'about' => ['home'],
-  'blog' => ['home', 'detail']
 );
 
 // default controller and action is SampleController and home

@@ -9,9 +9,9 @@
 - Course Content Management
   - Add or edit course content (videos, text lessons, - quizzes, etc.)
   - Manage course structure and syllabus
-  - Monitor student progress and completion rates
-- Student Enrollment Management
-  - View and manage student enrollments
+  - Monitor user progress and completion rates
+- User Enrollment Management
+  - View and manage user enrollments
   - Approve or deny enrollment requests
   - Refund or cancel enrollments
 - User Management
