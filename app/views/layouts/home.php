@@ -1,8 +1,9 @@
 <?php
 include_once(USER_PATH . 'views/layouts/inc/header.php');
+include_once(USER_PATH . 'views/layouts/inc/hero.php');
 ?>
 
-
+    
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">

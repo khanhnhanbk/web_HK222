@@ -13,6 +13,14 @@ class UserModel extends BaseModel
     $stmt = $this->conn->prepare($query);
     $stmt->bind_param("sssi", ...array_values($data));
     $stmt->execute();
+
+    $id = $this->conn->insert_id;
+
+    // create in user_info
+    $query = "INSERT INTO user_info (user_id) VALUES (?)";
+    $stmt = $this->conn->prepare($query);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
     return $stmt->insert_id;
   }
   public function getBy(array $data = [])
