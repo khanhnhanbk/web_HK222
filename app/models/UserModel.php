@@ -24,10 +24,5 @@ class UserModel extends BaseModel
     $stmt->execute();
     return $stmt->insert_id;
   }
-  public function getDisplayedCourses(){
-    $query = "SELECT * from courses where displayed=1";
-    $stmt = $this->conn->prepare($query);
-    $stmt->execute();
-    return $stmt->get_result();
-  }
+  
 }

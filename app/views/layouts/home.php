@@ -22,17 +22,14 @@ include_once(USER_PATH . 'views/layouts/inc/hero.php');
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Authorize</li>
-            </ol>
+            
 
-
-            <section class="content inner-page pt-4">
-                <?= @$content ?>
-            </section>
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+        </div>
+    </section><!-- End Breadcrumbs -->
+	<section>
+		<?= @$content ?>
+	</section>
+	<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -46,12 +43,6 @@ include_once(USER_PATH . 'views/layouts/inc/hero.php');
 
 <!-- Template Javascript -->
 <script src="public/js/user_home/main.js"></script>
-
-
-        </div>
-    </section><!-- End Breadcrumbs -->
-
-
 
 <?php
 include_once(USER_PATH . 'views/layouts/inc/footer.php');

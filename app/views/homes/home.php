@@ -118,20 +118,7 @@
         <div class="row">
             <?php
             // Database connection
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "btl_web";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Query to get records with displayed attribute of 1
-            $sql = "SELECT * FROM courses WHERE displayed=1";
-            $result = $conn->query($sql);
+            
 
             // Loop through the result set and add a new div for each record
 
@@ -233,11 +220,11 @@
 
                     // Query to get records with displayed attribute of 1
                     
-                    $result = $this->getDisplayedCourses();
+                    
 
                     // Loop through the result set and add a new div for each record
 
-                    while($row = $result->fetch_assoc()) {
+                    /*while($row = $result->fetch_assoc()) {
                         echo '<div class="col-lg-4 col-md-6 mb-4">
                         <div class="rounded overflow-hidden mb-2" style="width: 100%;height: 100%;">
                             <img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="100%" height="100%">
@@ -256,7 +243,7 @@
                             </div>
                         </div>
                     </div>';
-                    }
+                    }*/
                     
                 ?>
 
@@ -329,7 +316,7 @@
             </div>
         </div>
     </div>
-</div>
+
 <!-- Team End -->
 
 
@@ -421,18 +408,4 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="public/js/user_home/easing.min.js"></script>
-    <script src="public/js/user_home/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="public/js/user_home/jqBootstrapValidation.min.js"></script>
-    <script src="public/js/user_home/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="public/js/user_home/main.js"></script>
-</body>
-
-</html>
+    
