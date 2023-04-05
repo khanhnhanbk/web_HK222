@@ -5,7 +5,7 @@ $controllers = array(
   'course' => ['home', 'subject', 'detail'],
   'authorize' => ['login', 'register', 'logout'],
   'user' => ['home', 'profile', 'update'],
-  'about' => ['home'],
+  'aboutus' => ['home'],
 );
 
 // default controller and action is SampleController and home

@@ -5,6 +5,7 @@ class UserModel extends BaseModel
   public function __construct()
   {
     parent::__construct();
+    //$this->table = "users";
   }
 
   public function create(array $data = [])
@@ -23,19 +24,10 @@ class UserModel extends BaseModel
     $stmt->execute();
     return $stmt->insert_id;
   }
-  public function getBy(array $data = [])
-  {
-    $query = "SELECT * FROM users WHERE ";
-    $i = 0;
-    foreach ($data as $key => $value) {
-      if ($i == 0) {
-        $query .= "$key = '$value'";
-      } else {
-        $query .= " AND $key = '$value'";
-      }
-      $i++;
-    }
-    $result = $this->conn->query($query);
-    return $result->fetch_all(MYSQLI_ASSOC);
+  public function getDisplayedCourses(){
+    $query = "SELECT * from courses where displayed=1";
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute();
+    return $stmt->get_result();
   }
 }

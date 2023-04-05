@@ -2,9 +2,12 @@
 require_once(USER_PATH . 'controllers/BaseController.php');
 class SampleController extends BaseController
 {
+  private $model;
+  private $table;
   function __construct()
   {
     $this->folder = 'sample';
+    $this->model=$this->model('UserModel');
   }
 
   public function home()
@@ -27,4 +30,7 @@ class SampleController extends BaseController
   {
     $this->render('edit');
   }
+  /*public function getDisplayedCourses(){
+    return $this->model->getDisplayedCourses();
+  }*/
 }

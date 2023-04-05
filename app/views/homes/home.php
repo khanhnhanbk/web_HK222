@@ -217,12 +217,50 @@
 <!-- Registration End -->
 
 
-<!-- Team Start -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-5">
-            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Teachers</h5>
-            <h1>Meet Our Teachers</h1>
+    <!-- Courses Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
+                <h1>Our Popular Courses</h1>
+            </div>
+
+
+            <div class="row">
+                <?php
+                    // Database connection
+                  
+
+                    // Query to get records with displayed attribute of 1
+                    
+                    $result = $this->getDisplayedCourses();
+
+                    // Loop through the result set and add a new div for each record
+
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="col-lg-4 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2" style="width: 100%;height: 100%;">
+                            <img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="100%" height="100%">
+                            <div class="bg-secondary p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>'.$row['number_of_students'].' Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>'.$row['duration'].'</small>
+                                </div>
+                                <a class="h5" href="">'.$row['name'].'</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>'.$row['rating'].' <small>('.$row['number_of_comments'].')</small></h6>
+                                        <h5 class="m-0">$'.$row['price'].'</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+                    }
+                    
+                ?>
+
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-3 text-center team mb-4">
@@ -377,5 +415,24 @@
 
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+ 
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/user_home/easing.min.js"></script>
+    <script src="public/js/user_home/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="public/js/user_home/jqBootstrapValidation.min.js"></script>
+    <script src="public/js/user_home/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="public/js/user_home/main.js"></script>
+</body>
+
+</html>
