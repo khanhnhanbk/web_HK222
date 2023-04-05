@@ -5,14 +5,9 @@ $controllers = array(
   'sample' => ['home', 'error', 'edit'],
   'news' => ['home', 'detail'],
   'authorize' => ['login', 'register', 'logout'],
-<<<<<<< Updated upstream
-  'aboutus' => ['home'],
-); 
-=======
   'user' => ['home', 'profile', 'update'],
   'aboutus' => ['home'],
 );
->>>>>>> Stashed changes
 
 // default controller and action is SampleController and home
 if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) {

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<<<<<< Updated upstream
 <head>
     <meta charset="utf-8">
     <title>LearnHub</title>
@@ -46,205 +45,6 @@
                                 <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
                                 <h1 class="display-3 text-white mb-md-4">Best Education From Your Home</h1>
                                 <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
-=======
-   
-
-
-
-<!-- About Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="public/images/user_home/about.jpg" alt="">
-            </div>
-            <div class="col-lg-7">
-                <div class="text-left mb-4">
-                    <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
-                    <h1>Innovative Way To Learn</h1>
-                </div>
-                <p>Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum dolores amet voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus gubergren sit rebum clita amet, sea est sea vero sed et. Sadipscing labore tempor at sit dolor clita consetetur diam. Diam ut diam tempor no et, lorem dolore invidunt no nonumy stet ea labore, dolor justo et sit gubergren diam sed sed no ipsum. Sit tempor ut nonumy elitr dolores justo aliquyam ipsum stet</p>
-                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
-
-
-<!-- Category Start -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-5">
-            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Subjects</h5>
-            <h1>Explore Top Subjects</h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-1.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Web Design</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-2.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Development</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-3.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Game Design</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-4.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Apps Design</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-5.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Marketing</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-6.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Research</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-7.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">Content Writing</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="public/images/user_home/cat-8.jpg" alt="">
-                    <a class="cat-overlay text-white text-decoration-none" href="">
-                        <h4 class="text-white font-weight-medium">SEO</h4>
-                        <span>100 Courses</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Category Start -->
-
-
-<!-- Courses Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
-            <h1>Our Popular Courses</h1>
-        </div>
-
-
-        <div class="row">
-            <?php
-            // Database connection
-            $servername = "localhost";
-            $username = "root";
-            $password = "12345";
-            $dbname = "btl_web";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Query to get records with displayed attribute of 1
-            //$sql = "SELECT * FROM courses WHERE displayed=1";
-            //$result = $conn->query($sql);
-
-            // Loop through the result set and add a new div for each record
-
-            // while ($row = $result->fetch_assoc()) {
-            //     echo '<div class="col-lg-4 col-md-6 mb-4">
-            //             <div class="rounded overflow-hidden mb-2" style="width: 100%;height: 100%;">
-            //                 <img class="img-fluid" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" width="100%" height="100%">
-            //                 <div class="bg-secondary p-4">
-            //                     <div class="d-flex justify-content-between mb-3">
-            //                         <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>' . $row['number_of_students'] . ' Students</small>
-            //                         <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>' . $row['duration'] . '</small>
-            //                     </div>
-            //                     <a class="h5" href="">' . $row['name'] . '</a>
-            //                     <div class="border-top mt-4 pt-4">
-            //                         <div class="d-flex justify-content-between">
-            //                             <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>' . $row['rating'] . ' <small>(' . $row['number_of_comments'] . ')</small></h6>
-            //                             <h5 class="m-0">$' . $row['price'] . '</h5>
-            //                         </div>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         </div>';
-            // }
-            // $conn->close();
-            // ?>
-
-        </div>
-    </div>
-</div>
-
-<!-- Courses End -->
-
-
-<!-- Registration Start -->
-<div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-                <div class="mb-4">
-                    <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Need Any Courses</h5>
-                    <h1 class="text-white">30% Off For New Students</h1>
-                </div>
-                <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                    ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                    dolor</p>
-                <ul class="list-inline text-white m-0">
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                </ul>
-            </div>
-            <div class="col-lg-5">
-                <div class="card border-0">
-                    <div class="card-header bg-light text-center p-4">
-                        <h1 class="m-0">Sign Up Now</h1>
-                    </div>
-                    <div class="card-body rounded-bottom bg-primary p-5">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your name" required="required" />
->>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
@@ -602,7 +402,6 @@
     <!-- Testimonial End -->
 
 
-<<<<<<< Updated upstream
     <!-- Blog Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
@@ -665,7 +464,3 @@
 </body>
 
 </html>
-=======
-<!-- Back to Top -->
-<!-- Back to Top -->
->>>>>>> Stashed changes
