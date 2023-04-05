@@ -20,8 +20,6 @@ class AuthorizeController extends BaseController
       $password = escape($_POST['password']);
 
       $password = md5($password);
-      // echo $email;
-      // echo $password;
       $user = $this->user->getBy(['email' => $email, 'password' => $password]);
 
       if (count($user)  == 1) {
@@ -31,7 +29,7 @@ class AuthorizeController extends BaseController
           $_SESSION["auth"] = true;
           $_SESSION["user"] = array(
             'id' => $user['id'],
-            'name' => $user['name'],
+            'username' => $user['username'],
             'email' => $user['email'],
             'role' => $user['role'],
           );
@@ -54,12 +52,12 @@ class AuthorizeController extends BaseController
         $_SESSION["error"] = "Wrong email or password";
         $this->render('login', array(
           'title' => 'Login'
-        ), 'authorizes');
+        ),);
       }
     } else {
       $this->render('login', array(
         'title' => 'Login'
-      ), 'authorizes');
+      ),);
     }
   }
 
@@ -76,7 +74,7 @@ class AuthorizeController extends BaseController
         $_SESSION["error"] = "Please agree to our terms and conditions";
         $this->render('register', array(
           'title' => 'Register'
-        ), 'authorizes');
+        ));
       }
       // check if email already exists
       $user = $this->user->getBy(['email' => $email]);
@@ -84,7 +82,7 @@ class AuthorizeController extends BaseController
         $_SESSION["error"] = "Email already exists";
         $this->render('register', array(
           'title' => 'Register'
-        ), 'authorizes');
+        ));
         exit();
       }
 
@@ -93,26 +91,25 @@ class AuthorizeController extends BaseController
         $_SESSION["error"] = "Password do not match";
         $this->render('register', array(
           'title' => 'Register'
-        ), 'authorizes');
+        ));
         exit();
       }
 
       $password = md5($password);
 
       $this->user->create([
-        'name' => $name,
+        'username' => $name,
         'email' => $email,
         'password' => $password,
         'role' => $role
       ]);
 
-      // redirect to login page
       $_SESSION["success"] = "You are now registered and can log in";
       header('Location: /authorize/login');
     } else {
       $this->render('register', array(
         'title' => 'Register'
-      ), 'authorizes');
+      ));
     }
   }
   public function logout()

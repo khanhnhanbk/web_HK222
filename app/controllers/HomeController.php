@@ -9,16 +9,12 @@ class HomeController extends BaseController
 
   public function home()
   {
-    $this->render('home',[],'user_home_layout');
+    $this->render('home',[],'home');
   }
 
-  public function user()
+  public function error()
   {
-    $userModel = $this->model('User');
-    $user = $userModel->getAll();
-
-    $this->render('user', ['user' => $user]);
+    $this->render('error');
   }
-
   
 }

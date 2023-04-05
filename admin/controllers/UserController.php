@@ -8,23 +8,43 @@ class UserController extends BaseController
   {
     $this->folder = 'users';
     $this->table = 'users';
-    $this->userModel = $this->model( 'AdminUserModel');
-    
+    $this->userModel = $this->model('UserModel');
   }
   public function home()
   {
     $users = $this->userModel->getBy(['role' => 0]);
-    $data = array('users' => $users);
+    $blockedUser = $this->userModel->getBy(['role' => -1]);
+    $data = array(
+      'users' => $users,
+      'blockedUser' => $blockedUser
+    );
     $this->render('home', $data);
   }
 
-  public function ban()
+  public function block()
   {
-    echo "hello: " . $_POST['id'];
-    if (isset($_POST['btn-banUser'])) {
+    if (isset($_POST['btn-blockUser'])) {
       $id = $_POST['id'];
-      $this->userModel->ban($this->table,$id);
+      $this->userModel->block($id);
       header('Location: /admin/user/home');
+    }
+  }
+  public function unblock()
+  {
+    if (isset($_POST['btn-unblockUser'])) {
+      $id = $_POST['id'];
+      $this->userModel->unblock($id);
+      header('Location: /admin/user/home');
+    }
+  }
+  public function detail()
+  {
+    if (isset($_POST['detail-user-btn'])) {
+      $id = $_POST['id'];
+      $result = $this->userModel->getById($id);
+      $user = $result;
+      $data = array('user' => $user);
+      $this->render('detail', $data);
     }
   }
 }
