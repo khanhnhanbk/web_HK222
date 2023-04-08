@@ -41,4 +41,18 @@ class UserModel extends BaseModel
     $result = $stmt->get_result();
     return $result->fetch_all(MYSQLI_ASSOC);
   }
+  public function getById($id){
+      $sql = "SELECT * FROM users JOIN user_info ON users.id = user_info.user_id WHERE users.id = $id";
+      $result = $this->conn->query($sql);
+      return $result->fetch_assoc();
+  }
+  public function pwedit($id, $password){
+        $sql = "UPDATE `users` SET `password` = '$password' WHERE `users`.`id` = '$id';";
+        $this->conn->query($sql);
+  }
+  public function update($id, $avatar, $f_name, $l_name, $gender, $phone, $address, $age)
+    {
+        $sql = "UPDATE `user_info` SET `avatar` = '$avatar', `first_name` = '$f_name', `last_name` = '$l_name', `gender` = '$gender', `phone` = '$phone', `address` = '$address', `age` = '$age' WHERE `user_info`.`user_id` = '$id';";
+        $this->conn->query($sql);
+    }
 }
