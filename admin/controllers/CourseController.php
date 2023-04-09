@@ -1,5 +1,5 @@
 <?php
-
+// define('UPLOAD_FOLDER', realpath(dirname("admin/uploads")));
 require_once(ADMIN_PATH . 'controllers/BaseController.php');
 class CourseController extends BaseController
 {
@@ -67,9 +67,28 @@ class CourseController extends BaseController
             $name = $_POST['name'];
             $duration = $_POST['duration'];
             $price = $_POST['price'];
-            $image = $_POST['image'];
             $description = $_POST['description'];
-            $this->courseModel->editCourse($id, $name, $duration, $price, $image, $description);
+
+            $new_image = $_FILES['image']['name'];
+            $old_image = $_POST['old_image'];
+            if ($new_image != "") {
+                // $update_filename = $new_image;
+                $image_ext = pathinfo($new_image, PATHINFO_EXTENSION);
+                $update_filename = time() . "." . $image_ext;
+            } else {
+                $update_filename = $old_image;
+            }
+
+            $this->courseModel->editCourse($id, $name, $duration, $price, $update_filename, $description);
+            $tempname = $_FILES['image']['tmp_name'];
+            $folder = "admin/img/uploads";
+            if ($_FILES['image']['name']) {
+                move_uploaded_file($tempname, $folder . '/' . $update_filename);
+                if (file_exists($folder . '/' . $old_image)) {
+                    unlink($folder . '/' . $old_image);
+                }
+            }
+            // header("Location: /admin/course/edit?id=$id");
             if (!headers_sent()) {
                 header('Location: /admin/course/home');
             } else {
@@ -89,10 +108,14 @@ class CourseController extends BaseController
             $subject = $_POST['subject'];
             $duration = $_POST['duration'];
             $price = $_POST['price'];
-            $image = $_POST['image'];
+            $image = $_FILES['image']['name'];
+            $image_ext = pathinfo($image, PATHINFO_EXTENSION);
+            $filename = time() . "." . $image_ext;
+            $tempname = $_FILES['image']['tmp_name'];
+            $folder = "admin/img/uploads/$filename";
             $description = $_POST['description'];
-            $this->courseModel->addCourse($name, $subject, $duration, $price, $image, $description);
-            header('Location: /admin/course/home');
+            $this->courseModel->addCourse($name, $subject, $duration, $price, $filename, $description);
+            move_uploaded_file($tempname, $folder);
         }
     }
 }

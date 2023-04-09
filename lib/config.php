@@ -1,5 +1,4 @@
 <?php
-
 define('USER_PATH', BASE_PATH . 'app/');
 define('ADMIN_PATH', BASE_PATH . 'admin/');
 define('PATH_URL', '/public/');
