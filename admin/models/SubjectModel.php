@@ -13,6 +13,12 @@ class SubjectModel extends BaseModel
         $result = $this->conn->query($sql);
         return $result->fetch_assoc();
     }
+    public function getNameById($id)
+    {
+        $sql = "SELECT `name` FROM subjects WHERE subjects.id = $id";
+        $result = $this->conn->query($sql);
+        return $result->fetch_assoc();;
+    }
     public function getByName($name)
     {
         $sql = "SELECT * FROM subjects WHERE subjects.name = '$name'";
@@ -31,19 +37,22 @@ class SubjectModel extends BaseModel
         }
         return $subjects;
     }
-    public function insert($name){
+    public function insert($name)
+    {
         $query = "INSERT INTO subjects(name) VALUES(?)";
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("s", $name);
         $stmt->execute();
         return $stmt->insert_id;
     }
-    public function delete($id){
+    public function delete($id)
+    {
         $sql = "DELETE FROM subjects WHERE subjects.id = $id";
         $stmt = $this->conn->prepare($sql);
         return $stmt->execute();
     }
-    public function edit($name,$id){
+    public function edit($name, $id)
+    {
         $current_timestamp = time();
         $current_timestamp = strtotime('+5 hours', $current_timestamp);
         $created_at = date('Y-m-d H:i:s', $current_timestamp);

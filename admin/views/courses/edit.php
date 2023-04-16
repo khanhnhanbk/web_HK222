@@ -8,10 +8,7 @@
         <div class="form-group">
             <label for="subject">Subject</label>
             <select name="subject" class="form-control" id="subject" disabled>
-                <option>Math</option>
-                <?php foreach ($subjects as $subject) : ?>
-                    <option value="<?php echo $subject['id'] ?>"><?= $subject['name']; ?></option>
-                <?php endforeach; ?>
+                <option><?= $this->getSubjectName($course['subject_id'])  ?></option>
             </select>
         </div>
         <div class="form-group">

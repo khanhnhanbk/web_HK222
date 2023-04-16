@@ -26,16 +26,18 @@ class CourseController extends BaseController
     {
         $this->render('error');
     }
+
     public function getSubjectName($id)
     {
-        if ($id == 1) return "Math";
-        else if ($id == 2) return "Science";
-        else return "Physics";
+        // if ($id == 1) return "Math";
+        // else if ($id == 2) return "Science";
+        // else return "Physics";
+        $subjectName = $this->subjectModel->getNameById($id);
+        return $subjectName['name'];
     }
 
     public function detail()
     {
-
         if (isset($_POST['detail-course-btn'])) {
             $id = $_POST['id'];
             $course = $this->courseModel->getById($id);
@@ -45,6 +47,7 @@ class CourseController extends BaseController
         }
         $this->render('detail', $data);
     }
+
     public function delete()
     {
         if (isset($_POST['delete-course-btn'])) {
@@ -53,6 +56,7 @@ class CourseController extends BaseController
             header('Location: /admin/course/home');
         }
     }
+
     public function edit()
     {
         $id = $_GET['id'];
@@ -96,6 +100,7 @@ class CourseController extends BaseController
             }
         }
     }
+
     public function add()
     {
         $subjects = $this->subjectModel->getAll();
@@ -116,6 +121,11 @@ class CourseController extends BaseController
             $description = $_POST['description'];
             $this->courseModel->addCourse($name, $subject, $duration, $price, $filename, $description);
             move_uploaded_file($tempname, $folder);
+            if (!headers_sent()) {
+                header('Location: /admin/course/home');
+            } else {
+                echo '<script type="text/javascript">window.location.href="/admin/course/home"</script>';
+            }
         }
     }
 }

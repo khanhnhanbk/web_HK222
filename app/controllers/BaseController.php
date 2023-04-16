@@ -5,11 +5,12 @@ class BaseController
     protected $viewsPath = USER_PATH . 'views/'; // base path to views
     protected $folder; // subfolder of views
     protected $model;
+    private $settingModel;
     public function render(string $view, array $data = [], string $layout = null)
     {
         // Set the full path to the view file
         $viewPath = $this->viewsPath . $this->getViewFolder() . '/' . $view . '.php';
-        $this->model=$this->model('UserModel');
+        $this->model = $this->model('UserModel');
         // Check if the view file exists
         if (!file_exists($viewPath)) {
             return $this->showErrorPage();
@@ -28,7 +29,10 @@ class BaseController
             $this->renderLayout($layout, $content);
         } else {
             // Otherwise, use a default layout
-            $this->renderLayout('layout', $content);
+            $this->settingModel = $this->model('SettingModel');
+            $setting = $this->settingModel->getSetting();
+
+            $this->renderLayout('layout', $content, $setting);
         }
     }
 
@@ -37,15 +41,14 @@ class BaseController
         return $this->folder ?? '';
     }
 
-    protected function renderLayout(string $layout, string $content)
+    protected function renderLayout(string $layout, string $content, array $setting = [])
     {
         $layoutPath = $this->viewsPath . 'layouts/' . $layout . '.php';
-
+        extract($setting);
         // Check if the layout file exists
         if (!file_exists($layoutPath)) {
             return $this->showErrorPage();
         }
-
         // Render the layout with the content
         require $layoutPath;
     }
@@ -61,7 +64,8 @@ class BaseController
         require_once(USER_PATH . 'models/' . $model . '.php');
         return new $model();
     }
-    public function getDisplayedCourses(){
+    public function getDisplayedCourses()
+    {
         return  $this->model->getDisplayedCourses();
     }
 }

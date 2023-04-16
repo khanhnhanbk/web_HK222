@@ -60,12 +60,12 @@ class BaseController
         require_once(ADMIN_PATH . 'models/' . $model . '.php');
         return new $model();
     }
-    public function getById($table,$id){
-        return $this->userModel->getById($table,$id);
-
+    public function getById($table, $id)
+    {
+        return $this->userModel->getById($table, $id);
     }
-    public function insert($table,$row){
-        return $this->userModel->insert($table,$row);
-
+    public function insert($table, $row)
+    {
+        return $this->userModel->insert($table, $row);
     }
 }

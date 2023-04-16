@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Rapid Bootstrap Template - Index</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
+    <title><?= $setting['site_title'] ?></title>
+    <meta content="<?= $setting['meta_description'] ?>" name="description">
+    <meta content="<?= $setting['meta_keywords'] ?>" name="keywords">
+    <!-- images/favicon.png -->
     <!-- Favicons -->
-    <link href="<?= PATH_URL ?>images/favicon.png" rel="icon">
+    <link href="<?= PATH_URL . $setting['favicon_url'] ?>" rel="icon">
     <link href="<?= PATH_URL ?>images/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
@@ -34,7 +33,7 @@
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="index.html">Rapid</a></h1>
+            <h1 class="logo me-auto"><a href="index.html"><?php echo $setting['logo_url'] ?></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="<?= PATH_URL ?>images/logo.png" alt="" class="img-fluid"></a>-->
             <?php

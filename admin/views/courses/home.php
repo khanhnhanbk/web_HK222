@@ -1,16 +1,14 @@
 <div class="card p-3">
-
     <div class="table-responsive">
         <h4>
             <span class="m-2 ">All courses</span>
             <a href="/admin/course/add">
-                <button class="m-2 float-end  btn btn-icon btn-3 btn-primary" type="button">
+                <button class=" float-end  btn btn-icon btn-3 btn-primary" type="button">
                     <span class="btn-inner--icon m-1"><i class="fa fa-plus"></i></i></span>
                     <span class="btn-inner--text">Add Course</span>
                 </button>
             </a>
         </h4>
-
         <table class="table align-items-center mb-0">
             <thead>
                 <tr>
@@ -37,7 +35,6 @@
                             <span class="text-secondary text-xs font-weight-bold"><?php echo $course['created_at'] ?></span>
                         </td>
                         <td>
-
                             <form class="d-inline" action="/admin/course/detail" method="post">
                                 <input style="display: inline;" type="hidden" name="id" value="<?= $course['id']; ?>" />
                                 <button type="submit" class="bg-white border-0" name="detail-course-btn">
@@ -56,12 +53,9 @@
                                     <i class="fa fa-pen-square text-info"></i>
                                 </button>
                             </a>
-
-
                         </td>
                     </tr>
                 <?php endforeach; ?>
-
             </tbody>
         </table>
     </div>
