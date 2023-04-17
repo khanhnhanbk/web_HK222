@@ -61,7 +61,4 @@ class BaseController
         require_once(USER_PATH . 'models/' . $model . '.php');
         return new $model();
     }
-    public function getDisplayedCourses(){
-        return  $this->model->getDisplayedCourses();
-    }
 }

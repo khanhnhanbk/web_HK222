@@ -421,7 +421,7 @@
                             <div class="course-features mt-30">
                                <h4>Course Features </h4>
                                 <ul>
-                                    <li><i class="fa fa-clock-o"></i>Duaration : <span>10 Hours</span></li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>Duration : <span>10 Hours</span></li>
                                     <li><i class="fa fa-clone"></i>Leactures : <span>09</span></li>
                                     <li><i class="fa fa-beer"></i>Quizzes :  <span>05</span></li>
                                     <li><i class="fa fa-user-o"></i>Students :  <span>100</span></li>

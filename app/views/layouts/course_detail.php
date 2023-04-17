@@ -6,11 +6,19 @@
     <!--====== Title ======-->
     <title>LearnHub</title>
     
-    <!--====== Favicon Icon ======-->
+   
+
+    
+<?php
+include_once(USER_PATH . 'views/layouts/inc/header.php');
+?>
+
+
+	 <!--====== Favicon Icon ======-->
     
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/slick.css">
-
+    
     <!--====== Animate css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/animate.css">
     
@@ -27,7 +35,8 @@
     <link rel="stylesheet" href="/public/css/user_courses/detail/bootstrap.min.css">
     
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="/public/css/user_courses/detail/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3e8986fa8b.js" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="/public/css/user_courses/detail/font-awesome.min.css">-->
     
     <!--====== Default css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/default.css">
@@ -37,52 +46,6 @@
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/responsive.css">
-
-    
-<?php
-include_once(USER_PATH . 'views/layouts/inc/header.php');
-?>
-
-
-	<!--====== jquery js ======-->
-    <script src="public/js/user_courses/detail/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="public/js/user_courses/detail/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="public/js/user_courses/detail/bootstrap.min.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="public/js/user_courses/detail/slick.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="public/js/user_courses/detail/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="public/js/user_courses/detail/waypoints.min.js"></script>
-    <script src="public/js/user_courses/detail/jquery.counterup.min.js"></script>
-    
-    <!--====== Nice Select js ======-->
-    <script src="public/js/user_courses/detail/jquery.nice-select.min.js"></script>
-    
-    <!--====== Nice Number js ======-->
-    <script src="public/js/user_courses/detail/jquery.nice-number.min.js"></script>
-    
-    <!--====== Count Down js ======-->
-    <script src="public/js/user_courses/detail/jquery.countdown.min.js"></script>
-    
-    <!--====== Validator js ======-->
-    <script src="public/js/user_courses/detail/validator.min.js"></script>
-    
-    <!--====== Ajax Contact js ======-->
-    <script src="public/js/user_courses/detail/ajax-contact.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="public/js/user_courses/detail/main.js"></script>
-    
-    <!--====== Map js ======-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-    <script src="public/js/user_courses/detail/map-script.js"></script>
-
 	
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
@@ -109,7 +72,45 @@ include_once(USER_PATH . 'views/layouts/inc/header.php');
 			<?= @$content ?>
             
     </section>
-	
+	<!--====== jquery js ======-->
+    <script src="/public/js/user_courses/detail/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/js/user_courses/detail/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="/public/js/user_courses/detail/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="/public/js/user_courses/detail/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="/public/js/user_courses/detail/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="/public/js/user_courses/detail/waypoints.min.js"></script>
+    <script src="/public/js/user_courses/detail/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="/public/js/user_courses/detail/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="/public/js/user_courses/detail/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="/public/js/user_courses/detail/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="/public/js/user_courses/detail/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="/public/js/user_courses/detail/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="/public/js/user_courses/detail/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="/public/js/user_courses/detail/map-script.js"></script>
+
 			
 
 <?php

@@ -24,6 +24,7 @@
           </li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
           <?php if (isset($_SESSION['auth'])) : ?>
+            <li><a class="nav-link scrollto" href="/user/profile">Profile</a></li>
             <li><a class="nav-link scrollto" href="/authorize/logout">Logout</a></li>
           <?php else : ?>
           <li><a class="nav-link scrollto" href="/authorize/login">Login</a></li>
