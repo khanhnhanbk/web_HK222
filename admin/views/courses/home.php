@@ -4,7 +4,7 @@
         <h4>
             <span class="m-2 ">All courses</span>
             <a href="/admin/course/add">
-                <button class="m-2 float-end  btn btn-icon btn-3 btn-primary" type="button">
+                <button class="float-end btn btn-icon btn-3 btn-primary" type="button">
                     <span class="btn-inner--icon m-1"><i class="fa fa-plus"></i></i></span>
                     <span class="btn-inner--text">Add Course</span>
                 </button>
