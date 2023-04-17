@@ -9,16 +9,26 @@ class NewsController extends BaseController
 
   public function home()
   {
-    $this->render('home');
+    $newsModel = $this->model('NewsModel');
+    $news = $newsModel->gettAll();
+    $this->render('home', array(
+      'title' => 'News',
+      'news' => $news
+    ));
   }
   public function detail()
   {
-    $calculate = $this->model('calculate');
-    $data = $calculate->add(1, 2);
-    $this->render('detail', [
-      'title' => 'Detail page',
-      'subtitle' => 'Lorem Ipsum Dolor',
-      'img_url' => 'https://picsum.photos/200/300',
-    ]); // 'key' => value
+    $newsModel = $this->model('NewsModel');
+    if (isset($_GET['id'])) {
+      $id = $_GET['id'];
+      $new = $newsModel->getById($id);
+      $this->render('detail', array(
+        'title' => 'News',
+        'new' => $new
+      ));
+    } else {
+      header('Location: /news/home');
+      
+    }
   }
 }

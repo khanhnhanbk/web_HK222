@@ -3,18 +3,21 @@
         <div class="col-12 position-relative">
             <div class="card card-frame">
                 <div class="card-body">
-                    <form method="post">
-                        <?php if (isset($_SESSION['error'])) : ?>
-                            <div class="alert alert-danger alert-dismissible" role="alert">
+                    <?php if (isset($_SESSION['error'])) : ?>
+                        <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                                <?php echo $_SESSION['error'];
-                                unset($_SESSION['error']); ?>
-                            </div>
-                        <?php endif; ?>
-                        <h4>Edit profile</h4>
+                            <?php echo $_SESSION['error'];
+                            unset($_SESSION['error']); ?>
+                        </div>
+                    <?php endif; ?>
+                    <h4>Edit profile</h4>
+                    <form enctype="multipart/form-data" method="POST" action="/user/update">
                         <div class="form-group">
-                            <label for="avatar" class="form-control-label">Avatar</label>
-                            <input class="form-control" type="text" name="avatar" id="avatar" value="<?php echo $user['avatar'] ?>">
+                            <!-- current avatar -->
+                            <img src="<?php echo $user['avatar'] ?>" alt="image" style="max-width:380px; max-height:350px;"> <br>
+                            <!-- new avatar -->
+                            <label for="img1" class="form-control-label"> Avatar</label>
+                            <input class="form-control" type="file" name="img1" id="img1" >
                         </div>
                         <div class="form-group">
                             <label for="f_name" class="form-control-label">First name</label>
@@ -35,23 +38,23 @@
                         <div class="form-group">
                             <label for="gender" class="form-control-label">Gender</label>
                             <select name="gender" class="form-control" id="gender">
-                                <?php if ($user['gender'] == "male"){?>
+                                <?php if ($user['gender'] == "male") { ?>
                                     <option value="male" selected>Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
-                                <?php } else if ($user['gender'] == "female") {?>
+                                <?php } else if ($user['gender'] == "female") { ?>
                                     <option value="male">Male</option>
                                     <option value="female" selected>Female</option>
                                     <option value="other">Other</option>
-                                <?php }else if ($user['gender'] == "other") {?>
+                                <?php } else if ($user['gender'] == "other") { ?>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other" selected>Other</option>
-                                <?php }else {?>
+                                <?php } else { ?>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
-                                <?php }?>
+                                <?php } ?>
                             </select>
                         </div>
                         <div class="form-group">

@@ -20,18 +20,27 @@ class UserController extends BaseController
   }
   public function update()
   {
-    if (isset($_POST['save-button'])){
+    if (isset($_POST['save-button'])) {
       $id = $_SESSION["user"]["id"];
-      $avatar = escape($_POST['avatar']);
       $f_name = escape($_POST['f_name']);
       $l_name = escape($_POST['l_name']);
       $gender = escape($_POST['gender']);
       $phone = escape($_POST['phone']);
       $address = escape($_POST['address']);
       $age = escape($_POST['age']);
-      $this->userModel->update($id, $avatar, $f_name, $l_name, $gender, $phone, $address, $age);
+      // save image avatar
+
+      $avt = $_FILES['img1']['name'];
+      $avt_tmp = $_FILES['img1']['tmp_name'];
+      copy($avt_tmp, "public/images/$avt");
+      // update user
+
+
+
+
+      $this->userModel->update($id, $avt, $f_name, $l_name, $gender, $phone, $address, $age);
       header('Location:/user/profile');
-    } else{
+    } else {
       $id = $_SESSION["user"]["id"];
       $result = $this->userModel->getById($id);
       $user = $result;
@@ -39,8 +48,9 @@ class UserController extends BaseController
       $this->render('update', $data);
     }
   }
-  public function pw(){
-    if (isset($_POST['save-button'])){
+  public function pw()
+  {
+    if (isset($_POST['save-button'])) {
       $id = $_SESSION["user"]["id"];
       $password = escape($_POST['password']);
       $password2 = escape($_POST['password2']);
@@ -54,7 +64,7 @@ class UserController extends BaseController
       $password = md5($password);
       $this->userModel->pwedit($id, $password);
       header('Location:/user/profile');
-    } else{
+    } else {
       $this->render('pw', array(
         'title' => 'pw'
       ));

@@ -4,41 +4,44 @@ function slug($str)
 {
     return $str;
 }
-function upload($field, $config = array())
+function upload($field, $config = [])
 {
-    $options = array(
+    $defaultConfig = [
         'name' => '',
         'upload_path' => './',
         'allowed_exts' => '*',
-        'overwrite' => TRUE,
-        'max_size' => 0
-    );
-    $options = array_merge($options, $config); //Hợp nhất một hoặc nhiều mảng
-    if (!isset($_FILES[$field]))
-        return FALSE;
+        'overwrite' => true,
+        'max_size' => 0,
+    ];
+    $options = array_merge($defaultConfig, $config);
+
+    if (!isset($_FILES[$field]) || $_FILES[$field]['error'] !== UPLOAD_ERR_OK) {
+        return false;
+    }
+
     $file = $_FILES[$field];
-    if ($file['error'] != 0)
-        return FALSE;
-    $temp = explode(".", $file["name"]);
-    $ext = end($temp); //Đặt con trỏ bên trong của một mảng thành phần tử cuối cùng của nó
-    if ($options['allowed_exts'] != '*') {
-        $allowedExts = explode('|', $options['allowed_exts']);
-        if (!in_array($ext, $allowedExts))
-            return FALSE;
+    $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+
+    if ($options['allowed_exts'] !== '*' && !in_array($extension, explode('|', $options['allowed_exts']))) {
+        return false;
     }
 
-    $size = $file['size'] / 1024 / 1024;
-    if (($options['max_size'] > 0) && ($size > $options['max_size']))
-        return FALSE;
-
-    $name = empty($options['name']) ? $file["name"] : $options['name'] . '.' . $ext;
-    $file_path = $options['upload_path'] . $name;
-
-    if ($options['overwrite'] && file_exists($file_path)) {
-        unlink($file_path);
+    $sizeInMB = $file['size'] / 1024 / 1024;
+    if ($options['max_size'] > 0 && $sizeInMB > $options['max_size']) {
+        return false;
     }
 
-    move_uploaded_file($file["tmp_name"], $file_path);
+    $name = empty($options['name']) ? $file['name'] : $options['name'] . '.' . $extension;
+    $filePath = $options['upload_path'] . $name;
+
+    if ($options['overwrite'] && file_exists($filePath)) {
+        unlink($filePath);
+    }
+
+    if (!move_uploaded_file($file['tmp_name'], $filePath)) {
+        return false;
+    }
+
     return $name;
 }
 
@@ -56,7 +59,7 @@ function helper_login($email, $password)
     $password = escape($password);
 
     $password = md5($password);
-    
+
     $conn = DB::getInstance();
     $sql = "SELECT * FROM users WHERE email=? and `password`=?";
 

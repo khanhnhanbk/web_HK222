@@ -5,6 +5,7 @@ $controllers = array(
   'course' => ['home', 'subject', 'detail'],
   'authorize' => ['login', 'register', 'logout'],
   'user' => ['profile', 'update', 'pw'],
+  'news' => ['home', 'detail'],
   'aboutus' => ['home'],
 );
 
