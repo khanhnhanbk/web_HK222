@@ -9,7 +9,11 @@ class DashboardController extends BaseController
 
   public function home()
   {
-    $this->render('home');
+    $data = array(
+      'title' => 'Home',
+      'money' => 'This is home page'
+    );
+    $this->render('home', $data);
   }
 
   public function error()
