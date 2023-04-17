@@ -9,7 +9,7 @@ class DB
       $servername = "localhost";
       $username = "root";
       $password = "";
-      $dbname = "btl_web";
+      $dbname = "btl_web_v2";
 
       mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
       self::$instance = new mysqli($servername, $username, $password, $dbname);
