@@ -13,7 +13,7 @@ if (isset($_GET['url'])) {
     $action = isset($url[1]) ? $url[1] : 'home';
     $params = array_slice($url, 2);
 } else {
-    $controller = 'sample';
+    $controller = 'home';
     $action = 'home';
 }
 require_once USER_PATH  . "routes.php";
