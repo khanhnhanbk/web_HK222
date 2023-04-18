@@ -29,16 +29,32 @@ class UserController extends BaseController
       $address = escape($_POST['address']);
       $age = escape($_POST['age']);
       // save image avatar
+      $old_image = $_POST['old_image'];
+      if (isset($_FILES['avt_img']) && $_FILES['avt_img']['error'] == 0) {
+        $image = upload(
+          'avt_img',
+          array(
+            'name' => 'avt_img' . $id,
+            'upload_path' => BASE_PATH . 'public/uploads/avt/',
+            'allowed_exts' => "jpg|png|jpeg|gif",
+            'overwrite' => true,
+          ),
+        );
 
-      $avt = $_FILES['img1']['name'];
-      $avt_tmp = $_FILES['img1']['tmp_name'];
-      copy($avt_tmp, "public/images/$avt");
-      // update user
+        // delete old image
+        
+        if (file_exists(BASE_PATH . 'public/uploads/avt/' . $old_image)) {
+          unlink(BASE_PATH . 'public/uploads/avt/' . $old_image);
+        }
+      } else {
+        $image = $old_image;
+      }
+
+  
 
 
 
-
-      $this->userModel->update($id, $avt, $f_name, $l_name, $gender, $phone, $address, $age);
+      $this->userModel->update($id, $image, $f_name, $l_name, $gender, $phone, $address, $age);
       header('Location:/user/profile');
     } else {
       $id = $_SESSION["user"]["id"];

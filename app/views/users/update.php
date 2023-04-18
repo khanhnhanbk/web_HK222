@@ -14,10 +14,11 @@
                     <form enctype="multipart/form-data" method="POST" action="/user/update">
                         <div class="form-group">
                             <!-- current avatar -->
-                            <img src="<?php echo $user['avatar'] ?>" alt="image" style="max-width:380px; max-height:350px;"> <br>
+                            <img src="<?= BASE_PATH . 'public/uploads/avt/' . $user['avatar'] ?>" alt="image" style="max-width:380px; max-height:350px;"> <br>
+                            <input type="hidden" name="old_img" value="<?= $user['avatar'] ?>">
                             <!-- new avatar -->
-                            <label for="img1" class="form-control-label"> Avatar</label>
-                            <input class="form-control" type="file" name="img1" id="img1" >
+                            <label for="avt_img" class="form-control-label"> Avatar</label>
+                            <input class="form-control" type="file" name="avt_img" id="avt_img">
                         </div>
                         <div class="form-group">
                             <label for="f_name" class="form-control-label">First name</label>

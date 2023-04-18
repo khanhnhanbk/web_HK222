@@ -34,7 +34,7 @@
                         </td>
                         <td>
 
-                            <a href="/admin/news/detail?id=<?=$news['id']?>">
+                            <a href="/admin/news/detail?id=<?= $news['id'] ?>">
                                 <button type="submit" class="bg-white border-0" name="detail-news-btn">
                                     <i class="fa fa-info-circle text-primary"></i>
                                 </button>
