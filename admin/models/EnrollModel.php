@@ -50,13 +50,27 @@ class EnrollModel extends BaseModel
     $result = mysqli_query($this->conn, $sql);
     return $result;
     }
+    public function getEnrollments(){
+        $sql = "SELECT * FROM enrollments";
+    $result = mysqli_query($this->conn, $sql);
+    return $result;
+    }
     public function getOrderById($id){
         $sql = "SELECT * FROM orders where id = $id";
     $result = mysqli_query($this->conn, $sql);
     return $result;
     }
+    public function getEnrollmentById($id){
+        $sql = "SELECT * FROM enrollments where id = $id";
+    $result = mysqli_query($this->conn, $sql);
+    return $result;
+    }
     public function deleteOrderById($id){
         $sql = "DELETE FROM orders WHERE id = $id";
+    mysqli_query($this->conn, $sql);
+    }
+    public function deleteEnrollmentById($id){
+        $sql = "DELETE FROM enrollments WHERE id = $id";
     mysqli_query($this->conn, $sql);
     }
     public function insertEnrollment($user_id,$course_id){

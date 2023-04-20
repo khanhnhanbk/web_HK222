@@ -102,9 +102,6 @@
                                     <a id="curriculam-tab" data-toggle="tab" href="#curriculam" role="tab" aria-controls="curriculam" aria-selected="false">Curriculam</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="instructor" aria-selected="false">Instructor</a>
-                                </li>
-                                <li class="nav-item">
                                     <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
                                 </li>
                             </ul>
@@ -258,28 +255,7 @@
                                         </div>
                                     </div> <!-- curriculam cont -->
                                 </div>
-                                <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-                                    <div class="instructor-cont">
-                                        <div class="instructor-author">
-                                            <div class="author-thum">
-                                                <img src="/public/images/user_courses/detail/i-1.jpg" alt="Instructor">
-                                            </div>
-                                            <div class="author-name">
-                                                <a href="#"><h5>Sumon Hasan</h5></a>
-                                                <span>Senior WordPress Developer</span>
-                                                <ul class="social">
-                                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="instructor-description pt-25">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus fuga ratione molestiae unde provident quibusdam sunt, doloremque. Error omnis mollitia, ex dolor sequi. Et, quibusdam excepturi. Animi assumenda, consequuntur dolorum odio sit inventore aliquid, optio fugiat alias. Veritatis minima, dicta quam repudiandae repellat non sit, distinctio, impedit, expedita tempora numquam?</p>
-                                        </div>
-                                    </div> <!-- instructor cont -->
-                                </div>
+                                
                                 <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                                     <div class="reviews-cont">
                                         <div class="title">

@@ -12,7 +12,7 @@ class EnrollController extends BaseController
   }
   public function home()
   {
-    $data = array();
+    $get_orders = array();
     $orders=$this->enrollModel->getOrders();
     if (mysqli_num_rows($orders) > 0) {
 
@@ -34,13 +34,43 @@ class EnrollController extends BaseController
             $row['subject_name']=$subject['name'];
             $row['course_name']=$course['name'];
             $row['price']=$course['price'];
-            $data[] = $row;
+            $get_orders[] = $row;
         }
 
  
         
     } 
-   
+    $get_enrollments = array();
+    $enrollments=$this->enrollModel->getEnrollments();
+    if (mysqli_num_rows($enrollments) > 0) {
+
+        while ($row = mysqli_fetch_assoc($enrollments)) {
+            
+            $user=$this->enrollModel->getUserbyOrder(['id' => $row['user_id']]);
+            //$subject=$this->enrollModel->getSubjectbyOrder(['courses.id' => $row['course_id']]);
+            $course=$this->enrollModel->getCoursebyOrder(['id' => $row['course_id']]);
+            $newValues = array(
+                'username' => '',
+                'email' => '',
+                'course_name' => '',
+                'enrollment_date' => ''
+            );
+            $row = array_merge($newValues, $row);
+            $row['username']=$user['username']; 
+            $row['email']=$user['email'];
+           
+            $row['course_name']=$course['name'];
+            $row['enrollment_date']=$course['price'];
+            $get_enrollments[] = $row;
+        }
+
+ 
+        
+    }
+    $data = array(
+      'orders' => $get_orders,
+      'enrollments' => $get_enrollments
+    );
     $this->render('home', $data);
   }
 
@@ -154,4 +184,74 @@ class EnrollController extends BaseController
    
     
   }
+  public function detail_enrollment()
+  {
+    if (isset($_POST['detail-enrollment'])) {
+        $id = $_POST['id'];
+        $data = array();
+        $enrollment=$this->enrollModel->getEnrollmentById($id);
+        $row = mysqli_fetch_assoc($enrollment);
+        $user=$this->enrollModel->getUserbyOrder(['id' => $row['user_id']]);
+        $subject=$this->enrollModel->getSubjectbyOrder(['courses.id' => $row['course_id']]);
+        $course=$this->enrollModel->getCoursebyOrder(['id' => $row['course_id']]);
+        $newValues = array(
+            'username' => '',
+            'email' => '',
+            'subject_name' => '',
+            'course_name' => '',
+            'price' => ''
+        );
+        $row = array_merge($newValues, $row);
+        $row['username']=$user['username']; 
+        $row['email']=$user['email'];
+        $row['subject_name']=$subject['name'];
+        $row['course_name']=$course['name'];
+        $row['price']=$course['price'];
+        $data = $row;
+        $this->render('detail_enrollment', $data);
+
+ 
+        
+    } 
+   
+    
+  }
+  public function delete_enrollment()
+  {
+    error_reporting(0);
+    if (isset($_POST['delete-enrollment'])) {
+      $id = $_POST['id'];
+      $data = array();
+      $enrollment=$this->enrollModel->getEnrollmentById($id);
+      $row = mysqli_fetch_assoc($enrollment);
+      $user=$this->enrollModel->getUserbyOrder(['id' => $row['user_id']]);
+      $subject=$this->enrollModel->getSubjectbyOrder(['courses.id' => $row['course_id']]);
+      $course=$this->enrollModel->getCoursebyOrder(['id' => $row['course_id']]);
+      $newValues = array(
+          'username' => '',
+          'email' => '',
+          'subject_name' => '',
+          'course_name' => '',
+          'price' => ''
+      );
+      $row = array_merge($newValues, $row);
+      $row['username']=$user['username']; 
+      $row['email']=$user['email'];
+      $row['subject_name']=$subject['name'];
+      $row['course_name']=$course['name'];
+      $row['price']=$course['price'];
+      $data = $row;
+      $this->render('delete_enrollment', $data);
+
+
+      
+  } 
+    if (isset($_POST['confirm-delete-enrollment'])) {
+        $id = $_POST['id-to-delete'];
+        $this->enrollModel->deleteEnrollmentById($id);
+    } 
+
+    header("Location: /admin/enroll");
+  }
+  
 }
