@@ -1,13 +1,9 @@
 <div class="card card-frame">
     <div class="card-body d-flex gap-5 ">
-        <!-- <?php echo '<pre>';
-                var_dump($course);
-                echo '</pre>';
-                ?> -->
-
 
         <div class="">
-            <img style="width: 500px;" src="<?php echo $course['image'] ?>" alt="">
+            <img style="width: 500px;" src="/public/admin/img/uploads/<?php echo $course['image'] ?>" alt="">
+
         </div>
 
 

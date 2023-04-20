@@ -1,5 +1,5 @@
 <div class="card p-3">
-    <form method="post">
+    <form action="/admin/course/add" method="post" enctype="multipart/form-data">
         <h4>New course</h4>
         <div class="form-group">
             <label for="name" class="form-control-label">Name</label>
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="image" class="form-control-label">Image</label>
-            <input name="image" class="form-control" type="text" value="" id="image" placeholder="Image...">
+            <input name="image" class="form-control" type="file" value="" id="image" placeholder="Image...">
         </div>
         <div class="form-group">
             <label for="description" class="form-control-label">Description</label>

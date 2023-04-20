@@ -1,5 +1,5 @@
 <div class="card p-3">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <h4>Edit Course</h4>
         <div class="form-group">
             <label for="name" class="form-control-label">Name</label>
@@ -8,10 +8,7 @@
         <div class="form-group">
             <label for="subject">Subject</label>
             <select name="subject" class="form-control" id="subject" disabled>
-                <option>Math</option>
-                <?php foreach ($subjects as $subject) : ?>
-                    <option value="<?php echo $subject['id'] ?>"><?= $subject['name']; ?></option>
-                <?php endforeach; ?>
+                <option><?= $this->getSubjectName($course['subject_id'])  ?></option>
             </select>
         </div>
         <div class="form-group">
@@ -24,7 +21,10 @@
         </div>
         <div class="form-group">
             <label for="image" class="form-control-label">Image</label>
-            <input name="image" class="form-control" value="<?php echo $course['image'] ?>" type="text" id="image">
+            <input name="image" class="form-control" type="file" id="image">
+            <label for="">Current Image</label>
+            <input type="hidden" name="old_image" value="<?php echo $course['image'] ?>">
+            <img class="mt-2" height="50px" src="/public/admin/img/uploads/<?php echo $course['image'] ?>" alt="">
         </div>
         <div class="form-group">
             <label for="description" class="form-control-label">Description</label>
