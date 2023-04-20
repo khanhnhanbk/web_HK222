@@ -9,14 +9,12 @@
 
             <div class="row">
 
-              <div class="col-sm-6">
-                <div class="footer-newsletter">
-                  <img src="../../../../public/images/clients/client-1.png" style="max-width:250px; max-height:155px;"/>
-                </div>
+                            <div class="col-sm-6">
 
-                <div class="footer-info" style="max-width: 300px">
-                  <p>Nền tảng lớp học trực tuyến hàng đầu, LearnHub cung cấp giải pháp giáo dục toàn diện ngoài trường học cho tất cả học sinh trên cả nước với chất lượng tốt nhất!</p>
-                </div>
+                            <div class="footer-info" style="max-width: 300px">
+                                <h3> Learnhub</h3>
+                                <p><?= $setting['meta_description'] ?></p>
+                            </div>
 
               </div>
 
@@ -24,7 +22,7 @@
                 <div class="footer-links">
                     <h4>Liên kết hữu ích</h4>
                     <ul>
-                        <li><a href="/home">Home</a></li>
+                        <li><a href="/home" >Home</a></li>
                         <li><a href="/aboutus">About us</a></li>
                         <li><a href="/course">Courses</a></li>
                         <li><a href="#">Terms of service</a></li>
@@ -33,14 +31,12 @@
                 </div>
               </div>
               <div class="col-sm-3">
-                    <div class="footer-links">
+                    <div class="footer-links" style="max-width: 200px">
                         <h4>Liên hệ với chúng tôi</h4>
                         <p>
-                            111 Lý Thường Kiệt <br>
-                            Quận 10, Tp.HCM<br>
-                            Việt Nam <br>
-                            <strong>Phone:</strong> +84 12 3456 789<br>
-                            <strong>Email:</strong> learnhub@gmail.com<br>
+                            <strong>Address:</strong> <?= $setting['contact_address'] ?><br>
+                            <strong>Phone:</strong> <?= $setting['contact_phone'] ?><br>
+                            <strong>Email:</strong> <?= $setting['contact_email'] ?><br>
                         </p>
                     </div>
                     <div class="social-links">
@@ -64,7 +60,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+                &copy; Copyright <strong><?= $setting['logo_url'] ?></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!--
