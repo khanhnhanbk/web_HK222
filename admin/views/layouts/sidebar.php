@@ -7,7 +7,7 @@
         </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main" style="height:auto">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link active" href="/admin/dashboard">
@@ -48,6 +48,14 @@
                         <i class="ni ni-cart text-info text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Enroll Manager</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/admin/news">
+                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-album-2 text-info text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">News Manager</span>
                 </a>
             </li>
             <li class="nav-item">
