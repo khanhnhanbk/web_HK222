@@ -5,7 +5,7 @@ $controllers = array(
     'subject' => ['home', 'add', 'edit', 'delete', 'detail'],
     'course' => ['home', 'add', 'edit', 'delete', 'detail'],
     'user' => ['home',  'detail', 'block', 'unblock'],
-    'enroll' => ['home', 'detail', 'approve', 'reject'],
+    'enroll' => ['home', 'detail', 'approve', 'reject', 'detail_enrollment','delete_enrollment'],
     'news' => ['home', 'add', 'edit', 'delete', 'detail'],
     'setting' => ['home', 'about' ],
 );

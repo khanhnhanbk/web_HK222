@@ -46,10 +46,10 @@
 							<div id="tg-content" class="tg-content">
 								<div class="tg-resultandstyle">
 									<span class="tg-searchresult">Showing 1-2 of 60 results</span>
-									<ul class="tg-poststyleswitcher">
+									<!--<ul class="tg-poststyleswitcher">
 										<li><a href="coursesgrid.html"><i class="fa fa-th"></i></a></li>
 										<li class="tg-active"><a href="courseslist.html"><i class="fa fa-th-list"></i></a></li>
-									</ul>
+									</ul>-->
 								</div>
 								<div class="tg-courses tg-list">
 									<div class="row">
