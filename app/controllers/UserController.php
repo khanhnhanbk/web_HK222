@@ -20,18 +20,43 @@ class UserController extends BaseController
   }
   public function update()
   {
-    if (isset($_POST['save-button'])){
+    if (isset($_POST['save-button'])) {
       $id = $_SESSION["user"]["id"];
-      $avatar = escape($_POST['avatar']);
       $f_name = escape($_POST['f_name']);
       $l_name = escape($_POST['l_name']);
       $gender = escape($_POST['gender']);
       $phone = escape($_POST['phone']);
       $address = escape($_POST['address']);
       $age = escape($_POST['age']);
-      $this->userModel->update($id, $avatar, $f_name, $l_name, $gender, $phone, $address, $age);
+      // save image avatar
+      $old_image = $_POST['old_image'];
+      if (isset($_FILES['avt_img']) && $_FILES['avt_img']['error'] == 0) {
+        $image = upload(
+          'avt_img',
+          array(
+            'name' => 'avt_img' . $id,
+            'upload_path' => BASE_PATH . 'public/uploads/avt/',
+            'allowed_exts' => "jpg|png|jpeg|gif",
+            'overwrite' => true,
+          ),
+        );
+
+        // delete old image
+        
+        if (file_exists(BASE_PATH . 'public/uploads/avt/' . $old_image)) {
+          unlink(BASE_PATH . 'public/uploads/avt/' . $old_image);
+        }
+      } else {
+        $image = $old_image;
+      }
+
+  
+
+
+
+      $this->userModel->update($id, $image, $f_name, $l_name, $gender, $phone, $address, $age);
       header('Location:/user/profile');
-    } else{
+    } else {
       $id = $_SESSION["user"]["id"];
       $result = $this->userModel->getById($id);
       $user = $result;
@@ -39,8 +64,9 @@ class UserController extends BaseController
       $this->render('update', $data);
     }
   }
-  public function pw(){
-    if (isset($_POST['save-button'])){
+  public function pw()
+  {
+    if (isset($_POST['save-button'])) {
       $id = $_SESSION["user"]["id"];
       $password = escape($_POST['password']);
       $password2 = escape($_POST['password2']);
@@ -54,7 +80,7 @@ class UserController extends BaseController
       $password = md5($password);
       $this->userModel->pwedit($id, $password);
       header('Location:/user/profile');
-    } else{
+    } else {
       $this->render('pw', array(
         'title' => 'pw'
       ));

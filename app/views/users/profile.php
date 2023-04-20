@@ -5,7 +5,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <img src="<?= $user['avatar']; ?>" alt="image" style= "max-width:380px; max-height:350px;">
+                            <img src="<?= BASE_PATH . 'public/uploads/avt/' . $user['avatar']; ?>" alt="image" style= "max-width:380px; max-height:350px;">
                         </div>
                         <div class="col-8">
                             <h3>Full name: <?= $user['first_name'] . ' ' . $user['last_name'] ?></h3>
