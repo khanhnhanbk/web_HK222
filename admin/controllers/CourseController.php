@@ -49,6 +49,7 @@ class CourseController extends BaseController
             $id = $_POST['id'];
             $this->courseModel->deleteById($id);
             header('Location: /admin/course/home');
+            return;
         }
     }
     public function edit()
@@ -86,7 +87,8 @@ class CourseController extends BaseController
                     unlink($folder . '/' . $old_image);
                 }
             }
-            // header("Location: /admin/course/edit?id=$id");
+            // header("Location: /admin/course/home");
+
             if (!headers_sent()) {
                 header('Location: /admin/course/home');
             } else {
