@@ -10,7 +10,7 @@
     <meta content="<?= $setting['meta_description'] ?>" name="description">
     <meta content="<?= $setting['meta_keywords'] ?>" name="keywords">
 
-  
+
 
     <!-- Favicons -->
     <link href="<?= PATH_URL . $setting['favicon_url'] ?>" rel="icon">
@@ -38,8 +38,8 @@
         <div class="container d-flex align-items-center">
 
 
-            <h1 class="logo me-auto"><a href="index.html"><?php echo $setting['logo_url'] ?></a></h1>
-      
+            <h1 class="logo me-auto"><a href="/home"><?php echo $setting['logo_url'] ?></a></h1>
+
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="<?= PATH_URL ?>images/logo.png" alt="" class="img-fluid"></a>-->
             <?php
