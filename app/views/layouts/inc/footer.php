@@ -12,7 +12,7 @@
                             <div class="col-sm-6">
 
                                 <div class="footer-info">
-                                    <h3>Rapid</h3>
+                                    <h3><?= $setting['logo_url'] ?></h3>
                                     <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                                 </div>
 
@@ -41,11 +41,9 @@
                                 <div class="footer-links">
                                     <h4>Contact Us</h4>
                                     <p>
-                                        A108 Adam Street <br>
-                                        New York, NY 535022<br>
-                                        United States <br>
-                                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                                        <strong>Email:</strong> info@example.com<br>
+                                        <?= $setting['contact_address'] ?><br>
+                                        <strong>Phone:</strong> <?= $setting['contact_phone'] ?><br>
+                                        <strong>Email:</strong> <?= $setting['contact_email'] ?><br>
                                     </p>
                                 </div>
 
@@ -103,7 +101,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+                &copy; Copyright <strong><?= $setting['logo_url'] ?></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!--
@@ -120,17 +118,17 @@
     <a href="#header" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="<?=PATH_URL?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=PATH_URL?>plugins/purecounter/purecounter_vanilla.js"></script>
-    <script src="<?=PATH_URL?>plugins/aos/aos.js"></script>
-    <script src="<?=PATH_URL?>plugins/glightbox/js/glightbox.min.js"></script>
-    <script src="<?=PATH_URL?>plugins/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="<?=PATH_URL?>plugins/swiper/swiper-bundle.min.js"></script>
-    <script src="<?=PATH_URL?>plugins/php-email-form/validate.js"></script>
+    <script src="<?= PATH_URL ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= PATH_URL ?>plugins/purecounter/purecounter_vanilla.js"></script>
+    <script src="<?= PATH_URL ?>plugins/aos/aos.js"></script>
+    <script src="<?= PATH_URL ?>plugins/glightbox/js/glightbox.min.js"></script>
+    <script src="<?= PATH_URL ?>plugins/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="<?= PATH_URL ?>plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="<?= PATH_URL ?>plugins/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="<?=PATH_URL?>js/main.js"></script>
+    <script src="<?= PATH_URL ?>js/main.js"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>

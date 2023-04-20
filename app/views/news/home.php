@@ -8,7 +8,7 @@
                 <!-- all news card -->
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="<?= $new['image'] ?>" class="card-img-top" alt="image">
+                        <img src="<?= PATH_URL . "uploads/".  $new['image'] ?>" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title"><?= $new['title'] ?></h5>
                             <p class="card-text">
