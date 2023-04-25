@@ -503,8 +503,15 @@
 	float: left;
 	padding: 40px 0 0;
 	font:13px/30px 'Work Sans', Arial, Helvetica, sans-serif;
+	list-style: none;
+	text-align: center;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  
 }
-#user-courses .tg-pagination ul{
+
+/* #user-courses .tg-pagination ul{
 	margin:0;
 	padding:0;
 	width: 100%;
@@ -512,8 +519,8 @@
 	list-style:none;
 	line-height: 30px;
 	text-align: center;
-}
-#user-courses .tg-pagination ul li{
+} */
+#user-courses .tg-pagination li{
 	margin:3px;
 	width:30px;
 	height: 30px;
@@ -522,8 +529,10 @@
 	list-style-type:none;
 	display: inline-block;
 	vertical-align: top;
+	text-align:center;
+	cursor:pointer;
 }
-#user-courses .tg-pagination ul li a{
+#user-courses .tg-pagination li a{
 	color:#333;
 	display:block;
 	overflow: hidden;
@@ -531,21 +540,21 @@
 	position:relative;
 	line-height: 30px;
 }
-#user-courses .tg-pagination ul li.tg-nextpage a,
-#user-courses .tg-pagination ul li.tg-prevpage a{color: #333;}
-#user-courses .tg-pagination ul li.tg-prevpage a{border-radius: 3px 0 0 3px;}
-#user-courses .tg-pagination ul li.tg-nextpage a{border-radius: 0 3px 3px 0;}
-#user-courses .tg-pagination ul li.tg-nextpage a i,
-#user-courses .tg-pagination ul li.tg-prevpage a i{
+#user-courses .tg-pagination li.tg-nextpage a,
+#user-courses .tg-pagination li.tg-prevpage a{color: #333;}
+#user-courses .tg-pagination li.tg-prevpage a{border-radius: 3px 0 0 3px;}
+#user-courses .tg-pagination li.tg-nextpage a{border-radius: 0 3px 3px 0;}
+#user-courses .tg-pagination li.tg-nextpage a i,
+#user-courses .tg-pagination li.tg-prevpage a i{
 	display: block;
 	line-height: 30px;
 }
-#user-courses .tg-pagination ul li.tg-active a,
-#user-courses .tg-pagination ul li a:hover,
-#user-courses .tg-pagination ul li.tg-nextpage a:hover,
-#user-courses .tg-pagination ul li.tg-prevpage a:hover,
-#user-courses .tg-pagination ul li.tg-nextpage a:hover i,
-#user-courses .tg-pagination ul li.tg-prevpage a:hover i{
+#user-courses .tg-pagination li.tg-active a,
+#user-courses .tg-pagination li a:hover,
+#user-courses .tg-pagination li.tg-nextpage a:hover,
+#user-courses .tg-pagination li.tg-prevpage a:hover,
+#user-courses .tg-pagination li.tg-nextpage a:hover i,
+#user-courses .tg-pagination li.tg-prevpage a:hover i{
 	color: #fff;
 	background: #333;
 }
@@ -2492,6 +2501,7 @@
 	width: 100%;
 	float: left;
 	margin: -15px 0;
+	display:grid;
 }
 #user-courses .tg-courses .tg-course{padding: 15px 0;}
 /*======================================================================================

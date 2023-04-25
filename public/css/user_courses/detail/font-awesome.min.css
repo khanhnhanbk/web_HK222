@@ -252,8 +252,8 @@
   .fa-file-o:before {
     content: "\f016";
   }
-  .fa-clock-o:before {
-    content: "\f017";
+  #user-courses-detail .fa-clock-o:before {
+    content: '\f017';
   }
   .fa-road:before {
     content: "\f018";

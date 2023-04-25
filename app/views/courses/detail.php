@@ -23,7 +23,7 @@
    
     <!--====== PAGE BANNER PART START ======-->
     
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(/public/images/user_courses/detail/page-banner-2.jpg)">
+    <!--<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(/public/images/user_courses/detail/page-banner-2.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -36,15 +36,16 @@
                                 <li class="breadcrumb-item active" aria-current="page">Learn basic javasript</li>
                             </ol>
                         </nav>
-                    </div>  <!-- page banner cont -->
+                    </div>   page banner cont 
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>  row 
+        </div>  container
+    </section>-->
     
     <!--====== PAGE BANNER PART ENDS ======-->
     
     <!--====== COURSES SINGEl PART START ======-->
+    
     
     <section id="corses-singel" class="pt-90 pb-120 gray-bg">
         <div class="container">
@@ -52,11 +53,11 @@
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
                         <div class="title">
-                            <h3>Learn basis javascirpt from start for beginner</h3>
+                            <h3><?= $data['others']['name']?></h3>
                         </div> <!-- title -->
                         <div class="course-terms">
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <div class="teacher-name">
                                         <div class="thum">
                                             <img src="/public/images/user_courses/detail/t-1.jpg" alt="Teacher">
@@ -66,14 +67,14 @@
                                             <h6>Mark anthem</h6>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li>
                                     <div class="course-category">
                                         <span>Category</span>
-                                        <h6>Programaming </h6>
+                                        <h6><?= $data['others']['subject_name']?> </h6>
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <div class="review">
                                         <span>Review</span>
                                         <ul>
@@ -85,12 +86,12 @@
                                             <li class="rating">(20 Reviws)</li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div> <!-- course terms -->
                         
                         <div class="corses-singel-image pt-50">
-                            <img src="/public/images/user_courses/detail/cu-1.jpg" alt="Courses">
+                            <img src="<?=$data['others']['image']?>" alt="Courses">
                         </div> <!-- corses singel image -->
                         
                         <div class="corses-tab mt-30">
@@ -99,10 +100,10 @@
                                     <a class="active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="curriculam-tab" data-toggle="tab" href="#curriculam" role="tab" aria-controls="curriculam" aria-selected="false">Curriculam</a>
+                                    <a id="curriculam-tab" data-toggle="tab" href="#curriculam" role="tab" aria-controls="curriculam" aria-selected="false">Syllabus</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                                    <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Comments</a>
                                 </li>
                             </ul>
                             
@@ -110,41 +111,41 @@
                                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                                     <div class="overview-description">
                                         <div class="singel-description pt-40">
-                                            <h6>Course Summery</h6>
-                                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                            <h6>Course Description</h6>
+                                            <p><?= $data['others']['description'] ?></p>
                                         </div>
-                                        <div class="singel-description pt-40">
-                                            <h6>Requrements</h6>
-                                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
-                                        </div>
+                                        
                                     </div> <!-- overview description -->
                                 </div>
                                 <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
                                     <div class="curriculam-cont">
                                         <div class="title">
-                                            <h6>Learn basis javascirpt Lecture Started</h6>
+                                            <h6><?=$data['others']['name']?> Lecture </h6>
                                         </div>
                                         <div class="accordion" id="accordionExample">
+                                            <?php foreach ($data['others']['sylla'] as $index => $section) : ?>
                                             <div class="card">
                                                 <div class="card-header" id="headingOne">
                                                     <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                         <ul>
                                                             <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.1</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                            <li><span class="lecture">Week <?= $index+1 ?></span></li>
+                                                            <li><span class="head"><?= $section['name'] ?></span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span><?= $section['time'] ?> hours</span></span></li>
                                                         </ul>
                                                     </a>
                                                 </div>
 
                                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                     <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
+                                                        <p><?= $section['description'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <?php endforeach; ?>
                                             
-                                            <div class="card">
+                                            
+                                            <!-- <div class="card">
                                                 <div class="card-header" id="headingTow">
                                                     <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseTow" aria-expanded="true" aria-controls="collapseTow">
                                                         <ul>
@@ -251,7 +252,7 @@
                                                         <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div> <!-- curriculam cont -->
                                 </div>
@@ -262,20 +263,21 @@
                                             <h6>Student Reviews</h6>
                                         </div>
                                         <ul>
+                                        <?php foreach ($data['comments'] as $comment) : ?>
                                            <li>
                                                <div class="singel-reviews">
                                                     <div class="reviews-author">
                                                         <div class="author-thum">
-                                                            <img src="/public/images/user_courses/detail/r-1.jpg" alt="Reviews">
+                                                            <img src="/public/admin/img/team-2.jpg" alt="Reviews" width="70" height="70">
                                                         </div>
                                                         <div class="author-name">
-                                                            <h6>Bobby Aktar</h6>
-                                                            <span>April 03, 2019</span>
+                                                            <h6><?= $comment['user_name']?></h6>
+                                                            <span><?= $comment['comment_date']?></span>
                                                         </div>
                                                     </div>
                                                     <div class="reviews-description pt-20">
-                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                                        <div class="rating">
+                                                        <p><?= $comment['comment']?></p>
+                                                        <!-- <div class="rating">
                                                             <ul>
                                                                 <li><i class="fa fa-star"></i></li>
                                                                 <li><i class="fa fa-star"></i></li>
@@ -284,11 +286,12 @@
                                                                 <li><i class="fa fa-star"></i></li>
                                                             </ul>
                                                             <span>/ 5 Star</span>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
-                                                </div> <!-- singel reviews -->
+                                                </div> 
                                            </li>
-                                           <li>
+                                           <?php endforeach; ?>
+                                           <!-- <li>
                                                <div class="singel-reviews">
                                                     <div class="reviews-author">
                                                         <div class="author-thum">
@@ -312,7 +315,7 @@
                                                             <span>/ 5 Star</span>
                                                         </div>
                                                     </div>
-                                                </div> <!-- singel reviews -->
+                                                </div> 
                                            </li>
                                            <li>
                                                <div class="singel-reviews">
@@ -338,10 +341,10 @@
                                                             <span>/ 5 Star</span>
                                                         </div>
                                                     </div>
-                                                </div> <!-- singel reviews -->
-                                           </li>
+                                                </div> 
+                                           </li> -->
                                         </ul>
-                                        <div class="title pt-15">
+                                        <!-- <div class="title pt-15">
                                             <h6>Leave A Comment</h6>
                                         </div>
                                         <div class="reviews-form">
@@ -381,11 +384,11 @@
                                                             <button type="button" class="main-btn">Post Comment</button>
                                                         </div>
                                                     </div>
-                                                </div> <!-- row -->
+                                                </div> 
                                             </form>
-                                        </div>
-                                    </div> <!-- reviews cont -->
-                                </div>
+                                        </div> -->
+                                    </div> 
+                                </div> 
                             </div> <!-- tab content -->
                         </div>
                     </div> <!-- corses singel left -->
@@ -397,18 +400,47 @@
                             <div class="course-features mt-30">
                                <h4>Course Features </h4>
                                 <ul>
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>Duration : <span>10 Hours</span></li>
-                                    <li><i class="fa fa-clone"></i>Leactures : <span>09</span></li>
-                                    <li><i class="fa fa-beer"></i>Quizzes :  <span>05</span></li>
-                                    <li><i class="fa fa-user-o"></i>Students :  <span>100</span></li>
+                                    <li>Duration : <span><?=$data['others']['duration']?> Hours</span></li>
+                                    <li>Lectures : <span><?= count($data['others']['sylla'])?></span></li>
+                                    
                                 </ul>
-                                <div class="price-button pt-10">
-                                    <span>Price : <b>$25</b></span>
-                                    <a href="#" class="main-btn">Enroll Now</a>
-                                </div>
+                                <?php if (isset($_SESSION['auth'])) : ?>
+                                    <?php if ($data['isOrdered']==true) : ?>
+                                        <div class="price-button pt-10">
+                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
+                                            <span>Your order is waiting to be approved</span>
+                                        </div>
+                                    <?php elseif ($data['isEnrolled']==true) : ?>
+                                        <span>Price : <b>$<?=$data['others']['price']?></b></span>
+                                    <?php else: ?>
+                                        <form action="/course/detail" method="post">
+                                            <div class="price-button pt-10">
+                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
+                                            
+                                                <input type="hidden" name="user_id" value="<?= $_SESSION['user']['id']; ?>" />
+                                                <input type="hidden" name="course_id" value="<?= $data['others']['id']; ?>" />
+                                                <button type="submit" class="main-btn" name="enroll">Enroll Now</button>
+                                            </div>       
+                                        
+                                        </form>
+                                        <?php endif; ?>    
+                                    
+                                    
+                                    
+                             
+
+                                <?php else: ?>
+                                        <div class="price-button pt-10">
+                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
+                                            <button class="main-btn" onclick="alert('You have to sign in first!')">Enroll now</button>
+                                        </div>
+                                        
+                                
+                                <?php endif; ?>
+
                             </div> <!-- course features -->
                         </div>
-                        <div class="col-lg-12 col-md-6">
+                        <!-- <div class="col-lg-12 col-md-6">
                             <div class="You-makelike mt-30">
                                 <h4>You may like </h4> 
                                 <div class="singel-makelike mt-20">
@@ -448,11 +480,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div> <!-- row -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-8">
                     <div class="releted-courses pt-95">
                         <div class="title">
@@ -494,7 +526,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> <!-- singel course -->
+                                </div> 
                             </div>
                             <div class="col-md-6">
                                 <div class="singel-course mt-30">
@@ -531,13 +563,88 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> <!-- singel course -->
+                                </div> 
                             </div>
-                        </div> <!-- row -->
-                    </div> <!-- releted courses -->
+                            <div class="col-md-6">
+                                <div class="singel-course mt-30">
+                                    <div class="thum">
+                                        <div class="image">
+                                            <img src="/public/images/user_courses/detail/cu-2.jpg" alt="Course">
+                                        </div>
+                                        <div class="price">
+                                            <span>Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <span>(20 Reviws)</span>
+                                        <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                        <div class="course-teacher">
+                                            <div class="thum">
+                                                <a href="#"><img src="/public/images/user_courses/detail/t-2.jpg" alt="teacher"></a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="#"><h6>Mark anthem</h6></a>
+                                            </div>
+                                            <div class="admin">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="singel-course mt-30">
+                                    <div class="thum">
+                                        <div class="image">
+                                            <img src="/public/images/user_courses/detail/cu-2.jpg" alt="Course">
+                                        </div>
+                                        <div class="price">
+                                            <span>Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <span>(20 Reviws)</span>
+                                        <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                        <div class="course-teacher">
+                                            <div class="thum">
+                                                <a href="#"><img src="/public/images/user_courses/detail/t-2.jpg" alt="teacher"></a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="#"><h6>Mark anthem</h6></a>
+                                            </div>
+                                            <div class="admin">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                        </div> 
+                    </div> 
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+            </div>  -->
+        </div> 
     </section>
     
     <!--====== COURSES SINGEl PART ENDS ======-->

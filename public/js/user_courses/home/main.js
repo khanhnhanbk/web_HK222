@@ -622,4 +622,137 @@ jQuery(document).on('ready', function() {
 			}
 		}
 	});
+	
+	const course_item = document.querySelectorAll('.single-course');
+	let perPage = 5;
+	let idPage = 1;
+	let start = 0;
+	let end = perPage;
+	
+	
+	let totalPages = Math.ceil(course_item.length / perPage);
+	const productArr = [];
+
+	course_item.forEach(course => {
+	productArr.push(course.outerHTML);
+	});
+
+	
+	
+	
+	function initRender(product,totalPage) {;
+		renderListPage(totalPage);
+		renderCourse(product);
+	}
+	
+	initRender(productArr,totalPages);
+	changePage();
+	$('.tg-nextpage').on('click', () => {
+		idPage++;
+		if (idPage > totalPages) {
+			idPage = totalPages;
+		}
+		
+		
+		
+		
+		
+		getCurrentPage(idPage);
+		renderCourse(productArr);
+		renderListPage(totalPages);
+	});
+	
+	$('.tg-prevpage').on('click', () => {
+		idPage--;
+		if (idPage <= 0) {
+			idPage = 1;
+		}
+		
+		getCurrentPage(idPage);
+		renderCourse(productArr);
+		renderListPage(totalPages);
+	});
+	
+	
+	function getCurrentPage(indexPage) {
+		start = (indexPage - 1) * perPage;
+		end = indexPage * perPage;
+		totalPages = Math.ceil(course_item.length / perPage);
+		
+	}
+	
+	
+	
+	getCurrentPage(1);
+	function renderCourse(product) {
+		let html = '';
+		const content = productArr.map((item, index) => {
+			if (index >= start && index < end) {
+				html +=item;
+				return html;
+			}
+		});
+		document.getElementById('course-list').innerHTML = html;
+		// const myParagraph = document.getElementById('page');
+		// myParagraph.textContent = (start+1)+"-"+end;
+		// const myNumOfCourses = document.getElementById('numOfCourses');
+		// myNumOfCourses.textContent=course_item.length;
+		
+	}
+	
+	
+	
+	
+	function renderListPage(totalPages) {
+		let html = '';
+		
+		for (let i = 1; i <= totalPages; i++) {
+			if(i===idPage){
+				html += `<li class="tg-active"><a>${i}</a></li>`;
+			}
+			else{
+			html += `<li><a>${i}</a></li>`;
+			}
+		}
+		if (totalPages === 0) {
+			html = ''
+		}
+		document.getElementById('number-page').innerHTML = html;
+		
+
+	}
+	
+	
+	function changePage() {
+		const idPages = document.querySelectorAll('.number-page li');
+		const a = document.querySelectorAll('.number-page li a');
+		for (let i = 0; i < idPages.length; i++) {
+			idPages[i].onclick = function () {
+				let value = i + 1;
+				const current = document.getElementsByClassName('tg-active');
+				current[0].className = current[0].className.replace('tg-active', '');
+				this.classList.add('tg-active');
+				// if (value > 1 && value < idPages.length) {
+				// 	$('.btn-prev').removeClass('btn-active');
+				// 	$('.btn-next').removeClass('btn-active');
+				// }
+				// if (value == 1) {
+				// 	$('.btn-prev').addClass('btn-active');
+				// 	$('.btn-next').removeClass('btn-active');
+				// }
+				// if (value == idPages.length) {
+				// 	$('.btn-next').addClass('btn-active');
+				// 	$('.btn-prev').removeClass('btn-active');
+				// }
+				idPage = value;
+				getCurrentPage(idPage);
+				renderCourse(productArr);
+				
+			};
+		}
+	}
+	
+	
+	
+	
 });

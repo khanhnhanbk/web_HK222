@@ -52,15 +52,14 @@ class EnrollController extends BaseController
             $newValues = array(
                 'username' => '',
                 'email' => '',
-                'course_name' => '',
-                'enrollment_date' => ''
+                'course_name' => ''
             );
             $row = array_merge($newValues, $row);
             $row['username']=$user['username']; 
             $row['email']=$user['email'];
            
             $row['course_name']=$course['name'];
-            $row['enrollment_date']=$course['price'];
+            
             $get_enrollments[] = $row;
         }
 

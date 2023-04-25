@@ -35,8 +35,9 @@ include_once(USER_PATH . 'views/layouts/inc/header.php');
     <link rel="stylesheet" href="/public/css/user_courses/detail/bootstrap.min.css">
     
     <!--====== Fontawesome css ======-->
-    <script src="https://kit.fontawesome.com/3e8986fa8b.js" crossorigin="anonymous"></script>
-    <!--<link rel="stylesheet" href="/public/css/user_courses/detail/font-awesome.min.css">-->
+
+
+    <!-- <link rel="stylesheet" href="/public/css/user_courses/detail/font-awesome.min.css"> -->
     
     <!--====== Default css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/default.css">
@@ -46,15 +47,13 @@ include_once(USER_PATH . 'views/layouts/inc/header.php');
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="/public/css/user_courses/detail/responsive.css">
+    <link rel="stylesheet" href="/public/css/user_courses/detail/font-awesome.min.css">
 	
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Authorize</li>
-            </ol>
+            
 
 
             

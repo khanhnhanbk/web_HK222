@@ -26,7 +26,7 @@
                         <div class="d-flex justify-content-between">
                             <div><a href="/admin/enroll" class="btn btn-default">No</a></div>
                             <form action="/admin/enroll/approve" method="post">   
-                                    <input type="hidden"  name="id-to-approve" value="<?= $data['user_id']; ?>" />                            
+                                    <input type="hidden"  name="id-to-approve" value="<?= $data['id']; ?>" />                            
                                     <input type="hidden"  name="user-id-to-approve" value="<?= $data['user_id']; ?>" />
                                     <input type="hidden"  name="course-id-to-approve" value="<?= $data['course_id']; ?>" />
                                     

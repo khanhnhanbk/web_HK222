@@ -24,10 +24,7 @@ include_once(USER_PATH . 'views/layouts/inc/header.php');
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Authorize</li>
-            </ol>
+           
 
 
             
