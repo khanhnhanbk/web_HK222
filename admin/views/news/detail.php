@@ -1,11 +1,5 @@
 <div class="card card-frame">
     <div class="card-body d-flex gap-5 ">
-        <!-- <?php echo '<pre>';
-                var_dump($news);
-                echo '</pre>';
-                ?> -->
-
-
         <div class="">
             <img style="width: 500px;" src="<?= (PATH_URL . 'uploads/' . $news['image']) ?>" alt="Image">
         </div>

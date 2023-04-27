@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-5 col-md-6">
         <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-          <img src="<?=PATH_URL?>images/about-img.jpg" alt="" />
+          <img src="public/images/user_home/about.jpgw" alt="" />
         </div>
       </div>
 

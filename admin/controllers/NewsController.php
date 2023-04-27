@@ -82,7 +82,6 @@ class NewsController extends BaseController
             'name' => 'news_img' . $id,
             'upload_path' => BASE_PATH . 'public/uploads/',
             'allowed_exts' => "jpg|png|jpeg|gif",
-            'overwrite' => true,
           ),
         );
       } else {

@@ -19,17 +19,17 @@ function upload($field, $config = [])
         return false;
     }
 
-    $file = $_FILES[$field];
-    $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $file = $_FILES[$field]; 
+    $extension =  strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
 
     if ($options['allowed_exts'] !== '*' && !in_array($extension, explode('|', $options['allowed_exts']))) {
         return false;
     }
 
-    $sizeInMB = $file['size'] / 1024 / 1024;
-    if ($options['max_size'] > 0 && $sizeInMB > $options['max_size']) {
-        return false;
-    }
+    // $sizeInMB = $file['size'] / 1024 / 1024;
+    // if ($options['max_size'] > 0 && $sizeInMB > $options['max_size']) {
+    //     return false;
+    // }
 
     $name = empty($options['name']) ? $file['name'] : $options['name'] . '.' . $extension;
     $filePath = $options['upload_path'] . $name;
@@ -39,7 +39,8 @@ function upload($field, $config = [])
     }
 
     if (!move_uploaded_file($file['tmp_name'], $filePath)) {
-        return false;
+        // return false;
+        return "Hahaha" ;
     }
 
     return $name;

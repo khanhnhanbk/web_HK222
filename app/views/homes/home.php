@@ -1,4 +1,3 @@
-
 <!-- About Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
@@ -12,7 +11,7 @@
                     <h1>Innovative Way To Learn</h1>
                 </div>
                 <p>Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum dolores amet voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus gubergren sit rebum clita amet, sea est sea vero sed et. Sadipscing labore tempor at sit dolor clita consetetur diam. Diam ut diam tempor no et, lorem dolore invidunt no nonumy stet ea labore, dolor justo et sit gubergren diam sed sed no ipsum. Sit tempor ut nonumy elitr dolores justo aliquyam ipsum stet</p>
-                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                <a href="/aboutus" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
             </div>
         </div>
     </div>
@@ -118,113 +117,15 @@
         <div class="row">
             <?php
             // Database connection
-            
+
+
+            // Query to get records with displayed attribute of 1
+
+
 
             // Loop through the result set and add a new div for each record
 
-            // while ($row = $result->fetch_assoc()) {
-            //     echo '<div class="col-lg-4 col-md-6 mb-4">
-            //             <div class="rounded overflow-hidden mb-2" style="width: 100%;height: 100%;">
-            //                 <img class="img-fluid" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" width="100%" height="100%">
-            //                 <div class="bg-secondary p-4">
-            //                     <div class="d-flex justify-content-between mb-3">
-            //                         <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>' . $row['number_of_students'] . ' Students</small>
-            //                         <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>' . $row['duration'] . '</small>
-            //                     </div>
-            //                     <a class="h5" href="">' . $row['name'] . '</a>
-            //                     <div class="border-top mt-4 pt-4">
-            //                         <div class="d-flex justify-content-between">
-            //                             <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>' . $row['rating'] . ' <small>(' . $row['number_of_comments'] . ')</small></h6>
-            //                             <h5 class="m-0">$' . $row['price'] . '</h5>
-            //                         </div>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         </div>';
-            // }
-            // $conn->close();
-            // ?>
-
-        </div>
-    </div>
-</div>
-
-<!-- Courses End -->
-
-
-<!-- Registration Start -->
-<div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-                <div class="mb-4">
-                    <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Need Any Courses</h5>
-                    <h1 class="text-white">30% Off For New Students</h1>
-                </div>
-                <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                    ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                    dolor</p>
-                <ul class="list-inline text-white m-0">
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                    <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                </ul>
-            </div>
-            <div class="col-lg-5">
-                <div class="card border-0">
-                    <div class="card-header bg-light text-center p-4">
-                        <h1 class="m-0">Sign Up Now</h1>
-                    </div>
-                    <div class="card-body rounded-bottom bg-primary p-5">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your name" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your email" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Select a course</option>
-                                    <option value="1">Course 1</option>
-                                    <option value="2">Course 1</option>
-                                    <option value="3">Course 1</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Sign Up Now</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Registration End -->
-
-
-    <!-- Courses Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
-                <h1>Our Popular Courses</h1>
-            </div>
-
-
-            <div class="row">
-                <?php
-                    // Database connection
-                  
-
-                    // Query to get records with displayed attribute of 1
-                    
-                    
-
-                    // Loop through the result set and add a new div for each record
-
-                    /*while($row = $result->fetch_assoc()) {
+            /*while($row = $result->fetch_assoc()) {
                         echo '<div class="col-lg-4 col-md-6 mb-4">
                         <div class="rounded overflow-hidden mb-2" style="width: 100%;height: 100%;">
                             <img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="100%" height="100%">
@@ -244,78 +145,78 @@
                         </div>
                     </div>';
                     }*/
-                    
-                ?>
 
+            ?>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-3 text-center team mb-4">
+            <div class="team-item rounded overflow-hidden mb-2">
+                <div class="team-img position-relative">
+                    <img class="img-fluid" src="public/images/user_home/team-1.jpg" alt="">
+                    <div class="team-social">
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="bg-secondary p-4">
+                    <h5>Jhon Doe</h5>
+                    <p class="m-0">Web Designer</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3 text-center team mb-4">
-                <div class="team-item rounded overflow-hidden mb-2">
-                    <div class="team-img position-relative">
-                        <img class="img-fluid" src="public/images/user_home/team-1.jpg" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-secondary p-4">
-                        <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+        <div class="col-md-6 col-lg-3 text-center team mb-4">
+            <div class="team-item rounded overflow-hidden mb-2">
+                <div class="team-img position-relative">
+                    <img class="img-fluid" src="public/images/user_home/team-2.jpg" alt="">
+                    <div class="team-social">
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3 text-center team mb-4">
-                <div class="team-item rounded overflow-hidden mb-2">
-                    <div class="team-img position-relative">
-                        <img class="img-fluid" src="public/images/user_home/team-2.jpg" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-secondary p-4">
-                        <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
-                    </div>
+                <div class="bg-secondary p-4">
+                    <h5>Jhon Doe</h5>
+                    <p class="m-0">Web Designer</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 text-center team mb-4">
-                <div class="team-item rounded overflow-hidden mb-2">
-                    <div class="team-img position-relative">
-                        <img class="img-fluid" src="public/images/user_home/team-3.jpg" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-secondary p-4">
-                        <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-4">
+            <div class="team-item rounded overflow-hidden mb-2">
+                <div class="team-img position-relative">
+                    <img class="img-fluid" src="public/images/user_home/team-3.jpg" alt="">
+                    <div class="team-social">
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+                <div class="bg-secondary p-4">
+                    <h5>Jhon Doe</h5>
+                    <p class="m-0">Web Designer</p>
+                </div>
             </div>
-            <div class="col-md-6 col-lg-3 text-center team mb-4">
-                <div class="team-item rounded overflow-hidden mb-2">
-                    <div class="team-img position-relative">
-                        <img class="img-fluid" src="public/images/user_home/team-4.jpg" alt="">
-                        <div class="team-social">
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-4">
+            <div class="team-item rounded overflow-hidden mb-2">
+                <div class="team-img position-relative">
+                    <img class="img-fluid" src="public/images/user_home/team-4.jpg" alt="">
+                    <div class="team-social">
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="bg-secondary p-4">
-                        <h5>Jhon Doe</h5>
-                        <p class="m-0">Web Designer</p>
-                    </div>
+                </div>
+                <div class="bg-secondary p-4">
+                    <h5>Jhon Doe</h5>
+                    <p class="m-0">Web Designer</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <!-- Team End -->
 
@@ -402,10 +303,7 @@
 
 
 
- 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>

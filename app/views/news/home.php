@@ -6,22 +6,16 @@
             foreach ($news as $new) :
             ?>
                 <!-- all news card -->
-                <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="<?= PATH_URL . "uploads/".  $new['image'] ?>" class="card-img-top" alt="image">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $new['title'] ?></h5>
-                            <p class="card-text">
-                                <?php
-                                $content = $new['content'];
-                                $content = substr($content, 0, 10);
-                                echo $content . '...';
-                                ?>
-                            </p>
-                            <a href="/news/detail?id=<?= $new['id'] ?>" class="btn btn-primary">Read more</a>
-                        </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="<?= PATH_URL . "uploads/" .  $new['image'] ?>" alt="news">
+                        <a class="blog-overlay text-decoration-none" href="/news/detail?id=<?= $new['id'] ?>">
+                            <h5 class="mb-3"><?= $new['title'] ?></h5>
+                            <p class="text-primary m-0"><?= $new['published_at'] ?></p>
+                        </a>
                     </div>
                 </div>
+
             <?php endforeach; ?>
         </div>
     </div>
