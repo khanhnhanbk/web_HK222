@@ -5,7 +5,7 @@
                 <div class="col-sm-4">
                     <h3>Learnhub</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <button class="btn btn-primary">Sign up</button>
+
                 </div>
                 <div class="col-sm-4">
                     <h4>Links</h4>

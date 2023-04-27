@@ -17,7 +17,7 @@
                         </div> <!-- course terms -->
 
                         <div class="corses-singel-image pt-50">
-                            <img src="<?= $data['others']['image'] ?>" alt="Courses">
+                            <img src="<?= PATH_URL . "uploads/" .  $data['others']['image'] ?>" alt="Courses">
                         </div> <!-- corses singel image -->
 
                         <div class="corses-tab mt-30">
@@ -133,8 +133,11 @@
                                             <span>Your order is waiting to be approved</span>
                                         </div>
                                     <?php elseif ($data['isEnrolled'] == true) : ?>
-                                        <span>Price : <b>$<?= $data['others']['price'] ?></b></span>
-                                    <?php else : ?>
+                                        <div class="price-button pt-10">
+                                
+                                        <span>You can learn now</span>
+                                        </div>
+                                        <?php else : ?>
                                         <form action="/course/detail" method="post">
                                             <div class="price-button pt-10">
                                                 <span>Price : <b>$<?= $data['others']['price'] ?></b></span>

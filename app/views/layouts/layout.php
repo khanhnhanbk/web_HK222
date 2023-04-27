@@ -1,4 +1,10 @@
 <?php
+$url = $_SERVER['REQUEST_URI'];
+$parts = explode('/', $url);
+$last = end($parts);
+$last = explode('?', $last);
+$last = $last[0];
+
 include_once(USER_PATH . 'views/layouts/inc/header.php');
 ?>
 
@@ -9,7 +15,7 @@ include_once(USER_PATH . 'views/layouts/inc/header.php');
 
             <ol>
                 <li><a href="index.html">Home</a></li>
-                <li>Authorize</li>
+                <li> <?=$last ?></li>
             </ol>
 
 
