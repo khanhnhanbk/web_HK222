@@ -4,47 +4,22 @@
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
                         <div class="title">
-                            <h3><?= $data['others']['name']?></h3>
+                            <h3><?= $data['others']['name'] ?></h3>
                         </div> <!-- title -->
                         <div class="course-terms">
                             <ul>
-                                <!-- <li>
-                                    <div class="teacher-name">
-                                        <div class="thum">
-                                            <img src="/public/images/user_courses/detail/t-1.jpg" alt="Teacher">
-                                        </div>
-                                        <div class="name">
-                                            <span>Teacher</span>
-                                            <h6>Mark anthem</h6>
-                                        </div>
-                                    </div>
-                                </li> -->
                                 <li>
                                     <div class="course-category">
                                         <span>Category</span>
-                                        <h6><?= $data['others']['subject_name']?> </h6>
+                                        <h6><?= $data['others']['subject_name'] ?> </h6>
                                     </div>
                                 </li>
-                                <!-- <li>
-                                    <div class="review">
-                                        <span>Review</span>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li class="rating">(20 Reviws)</li>
-                                        </ul>
-                                    </div>
-                                </li> -->
-                            </ul>
                         </div> <!-- course terms -->
-                        
+
                         <div class="corses-singel-image pt-50">
-                            <img src="<?=$data['others']['image']?>" alt="Courses">
+                            <img src="<?= $data['others']['image'] ?>" alt="Courses">
                         </div> <!-- corses singel image -->
-                        
+
                         <div class="corses-tab mt-30">
                             <ul class="nav nav-justified" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -57,7 +32,7 @@
                                     <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Comments</a>
                                 </li>
                             </ul>
-                            
+
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                                     <div class="overview-description">
@@ -65,170 +40,60 @@
                                             <h6>Course Description</h6>
                                             <p><?= $data['others']['description'] ?></p>
                                         </div>
-                                        
+
                                     </div> <!-- overview description -->
                                 </div>
                                 <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
                                     <div class="curriculam-cont">
                                         <div class="title">
-                                            <h6><?=$data['others']['name']?> Lecture </h6>
+                                            <h6><?= $data['others']['name'] ?> Lecture </h6>
                                         </div>
                                         <div class="accordion" id="accordionExample">
                                             <?php foreach ($data['others']['sylla'] as $index => $section) : ?>
-                                            <div class="card">
-                                                <div class="card-header" id="headingOne">
-                                                    <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Week <?= $index+1 ?></span></li>
-                                                            <li><span class="head"><?= $section['name'] ?></span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span><?= $section['time'] ?> hours</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne">
+                                                        <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            <ul>
+                                                                <li><i class="fa fa-file-o"></i></li>
+                                                                <li><span class="lecture">Week <?= $index + 1 ?></span></li>
+                                                                <li><span class="head"><?= $section['name'] ?></span></li>
+                                                                <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span><?= $section['time'] ?> hours</span></span></li>
+                                                            </ul>
+                                                        </a>
+                                                    </div>
 
-                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p><?= $section['description'] ?></p>
+                                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <p><?= $section['description'] ?></p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             <?php endforeach; ?>
-                                            
-                                            
-                                            <!-- <div class="card">
-                                                <div class="card-header" id="headingTow">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseTow" aria-expanded="true" aria-controls="collapseTow">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.2</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-
-                                                <div id="collapseTow" class="collapse" aria-labelledby="headingTow" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="card">
-                                                <div class="card-header" id="headingThree">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.3</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="card">
-                                                <div class="card-header" id="headingFore">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.4</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseFore" class="collapse" aria-labelledby="headingFore" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="card">
-                                                <div class="card-header" id="headingFive">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.5</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="card">
-                                                <div class="card-header" id="headingSix">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.6</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="card">
-                                                <div class="card-header" id="headingSeven">
-                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                                        <ul>
-                                                            <li><i class="fa fa-file-o"></i></li>
-                                                            <li><span class="lecture">Lecture 1.7</span></li>
-                                                            <li><span class="head">What is javascirpt</span></li>
-                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
-                                                        </ul>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        <p>Ut quis scelerisque risus, et viverra nisi. Phasellus ultricies luctus augue, eget maximus felis laoreet quis. Maecenasbibendum tempor eros.</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div> <!-- curriculam cont -->
                                 </div>
-                                
+
                                 <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                                     <div class="reviews-cont">
                                         <div class="title">
                                             <h6>Student Reviews</h6>
                                         </div>
                                         <ul>
-                                        <?php foreach ($data['comments'] as $comment) : ?>
-                                           <li>
-                                               <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="/public/admin/img/team-2.jpg" alt="Reviews" width="70" height="70">
+                                            <?php foreach ($data['comments'] as $comment) : ?>
+                                                <li>
+                                                    <div class="singel-reviews">
+                                                        <div class="reviews-author">
+                                                            <div class="author-thum">
+                                                                <img src="/public/admin/img/team-2.jpg" alt="Reviews" width="70" height="70">
+                                                            </div>
+                                                            <div class="author-name">
+                                                                <h6><?= $comment['user_name'] ?></h6>
+                                                                <span><?= $comment['comment_date'] ?></span>
+                                                            </div>
                                                         </div>
-                                                        <div class="author-name">
-                                                            <h6><?= $comment['user_name']?></h6>
-                                                            <span><?= $comment['comment_date']?></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <p><?= $comment['comment']?></p>
-                                                        <!-- <div class="rating">
+                                                        <div class="reviews-description pt-20">
+                                                            <p><?= $comment['comment'] ?></p>
+                                                            <!-- <div class="rating">
                                                             <ul>
                                                                 <li><i class="fa fa-star"></i></li>
                                                                 <li><i class="fa fa-star"></i></li>
@@ -238,155 +103,60 @@
                                                             </ul>
                                                             <span>/ 5 Star</span>
                                                         </div> -->
-                                                    </div>
-                                                </div> 
-                                           </li>
-                                           <?php endforeach; ?>
-                                           <!-- <li>
-                                               <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="/public/images/user_courses/detail/r-2.jpg" alt="Reviews">
-                                                        </div>
-                                                        <div class="author-name">
-                                                            <h6>Humayun Ahmed</h6>
-                                                            <span>April 13, 2019</span>
                                                         </div>
                                                     </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                                        <div class="rating">
-                                                            <ul>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                            </ul>
-                                                            <span>/ 5 Star</span>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                           </li>
-                                           <li>
-                                               <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="/public/images/user_courses/detail/r-3.jpg" alt="Reviews">
-                                                        </div>
-                                                        <div class="author-name">
-                                                            <h6>Tania Aktar</h6>
-                                                            <span>April 20, 2019</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                                        <div class="rating">
-                                                            <ul>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                            </ul>
-                                                            <span>/ 5 Star</span>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                           </li> -->
+                                                </li>
+                                            <?php endforeach; ?>
+                                        
                                         </ul>
-                                        <!-- <div class="title pt-15">
-                                            <h6>Leave A Comment</h6>
-                                        </div>
-                                        <div class="reviews-form">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-singel">
-                                                            <input type="text" placeholder="Fast name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-singel">
-                                                            <input type="text" placeholder="Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <div class="rate-wrapper">
-                                                                <div class="rate-label">Your Rating:</div>
-                                                                <div class="rate">
-                                                                    <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
-                                                                    <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
-                                                                    <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
-                                                                    <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
-                                                                    <div class="rate-item"><i class="fa fa-star" aria-hidden="true"></i></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <textarea placeholder="Comment"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <button type="button" class="main-btn">Post Comment</button>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </form>
-                                        </div> -->
-                                    </div> 
-                                </div> 
+                                    </div>
+                                </div>
                             </div> <!-- tab content -->
                         </div>
                     </div> <!-- corses singel left -->
-                    
+
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
-                               <h4>Course Features </h4>
+                                <h4>Course Features </h4>
                                 <ul>
-                                    <li>Duration : <span><?=$data['others']['duration']?> Hours</span></li>
-                                    <li>Lectures : <span><?= count($data['others']['sylla'])?></span></li>
-                                    
+                                    <li>Duration : <span><?= $data['others']['duration'] ?> Hours</span></li>
+                                    <li>Lectures : <span><?= count($data['others']['sylla']) ?></span></li>
+
                                 </ul>
                                 <?php if (isset($_SESSION['auth'])) : ?>
-                                    <?php if ($data['isOrdered']==true) : ?>
+                                    <?php if ($data['isOrdered'] == true) : ?>
                                         <div class="price-button pt-10">
-                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
+                                            <span>Price : <b>$<?= $data['others']['price'] ?></b></span>
                                             <span>Your order is waiting to be approved</span>
                                         </div>
-                                    <?php elseif ($data['isEnrolled']==true) : ?>
-                                        <span>Price : <b>$<?=$data['others']['price']?></b></span>
-                                    <?php else: ?>
+                                    <?php elseif ($data['isEnrolled'] == true) : ?>
+                                        <span>Price : <b>$<?= $data['others']['price'] ?></b></span>
+                                    <?php else : ?>
                                         <form action="/course/detail" method="post">
                                             <div class="price-button pt-10">
-                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
-                                            
+                                                <span>Price : <b>$<?= $data['others']['price'] ?></b></span>
                                                 <input type="hidden" name="user_id" value="<?= $_SESSION['user']['id']; ?>" />
                                                 <input type="hidden" name="course_id" value="<?= $data['others']['id']; ?>" />
                                                 <button type="submit" class="main-btn" name="enroll">Enroll Now</button>
-                                            </div>       
-                                        
-                                        </form>
-                                        <?php endif; ?>    
-                                    
-                                    
-                                    
-                             
+                                            </div>
 
-                                <?php else: ?>
-                                        <div class="price-button pt-10">
-                                            <span>Price : <b>$<?=$data['others']['price']?></b></span>
-                                            <button class="main-btn" onclick="alert('You have to sign in first!')">Enroll now</button>
-                                        </div>
-                                        
-                                
+                                        </form>
+                                    <?php endif; ?>
+
+
+
+
+
+                                <?php else : ?>
+                                    <div class="price-button pt-10">
+                                        <span>Price : <b>$<?= $data['others']['price'] ?></b></span>
+                                        <button class="main-btn" onclick="alert('You have to sign in first!')">Enroll now</button>
+                                    </div>
+
+
                                 <?php endif; ?>
 
                             </div> <!-- course features -->
@@ -595,28 +365,18 @@
                     </div> 
                 </div>
             </div>  -->
-        </div> 
+        </div>
     </section>
-    
-    <!--====== COURSES SINGEl PART ENDS ======-->
-   
-    <!--====== FOOTER PART START ======-->
-    
-    
-    <!--====== FOOTER PART ENDS ======-->
-   
-    <!--====== BACK TO TP PART START ======-->
-    
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    
-    <!--====== BACK TO TP PART ENDS ======-->
-   
-    
-    
-    
-    
-    
-    
-    
-    
 
+    <!--====== COURSES SINGEl PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TO TP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!--====== BACK TO TP PART ENDS ======-->

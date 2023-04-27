@@ -105,10 +105,6 @@
 												<i class="icon-book"></i>
 												<input type="search" name="keyword" class="form-control" placeholder="Keyword">
 											</div>
-											<!-- <div class="tg-inputwithicon">
-													<i class="icon-layers"></i>
-													<span class="tg-select">
-														<select>
 															<?php foreach ($data['subjects'] as $subject) : ?>
 															<option value=""><?= $subject['name'] ?></option>
 															<?php endforeach; ?>

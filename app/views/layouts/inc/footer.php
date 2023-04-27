@@ -1,78 +1,37 @@
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="section-bg">
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-12">
-
+    <footer id="footer" class="section-bg py-5">
+        <div class="container">
             <div class="row">
-
-                            <div class="col-sm-6">
-
-                            <div class="footer-info" style="max-width: 300px">
-                                <h3> Learnhub</h3>
-                                <p><?= $setting['meta_description'] ?></p>
-                            </div>
-
-              </div>
-
-              <div class="col-sm-3">
-                <div class="footer-links">
-                    <h4>Liên kết hữu ích</h4>
+                <div class="col-sm-4">
+                    <h3>Learnhub</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn btn-primary">Sign up</button>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Links</h4>
                     <ul>
-                        <li><a href="/home" >Home</a></li>
-                        <li><a href="/aboutus">About us</a></li>
-                        <li><a href="/course">Courses</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="course">Courses</a></li>
+                        <li><a href="aboutus">About us</a></li>
                     </ul>
                 </div>
-              </div>
-              <div class="col-sm-3">
-                    <div class="footer-links" style="max-width: 200px">
-                        <h4>Liên hệ với chúng tôi</h4>
-                        <p>
-                            <strong>Address:</strong> <?= $setting['contact_address'] ?><br>
-                            <strong>Phone:</strong> <?= $setting['contact_phone'] ?><br>
-                            <strong>Email:</strong> <?= $setting['contact_email'] ?><br>
-                        </p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="twitter ml-5 mr-5"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook ml-5 mr-5"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram ml-5 mr-5"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin ml-5 mr-5"><i class="bi bi-linkedin"></i></a>
-                    </div>
+                <div class="col-sm-4">
+                    <h4>Contact us</h4>
+                    <ul class="social-icons">
+                        <!-- phone -->
+                        <li><a href="#"><i class="fas fa-phone"></i> <?= $setting['contact_phone'] ?></a></li>
+                        <!-- email -->
+                        <li><a href="#"><i class="fas fa-envelope"></i> <?= $setting['contact_email'] ?></a></li>
+                    </ul>
                 </div>
             </div>
-            
-
-          </div>
-
-          
-
-        </div>
-
-      </div>
-    </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><?= $setting['logo_url'] ?></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
-      -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>&copy; 2023 Learnhub. All Rights Reserved</p>
+                </div>
             </div>
         </div>
-    </footer><!-- End  Footer -->
+    </footer>
 
     <a href="#header" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
