@@ -2,7 +2,7 @@
     <div class="card-body d-flex gap-5 ">
 
         <div class="">
-            <img style="width: 500px;" src="/public/admin/img/uploads/<?php echo $course['image'] ?>" alt="">
+            <img style="width: 500px;" src="/public/uploads/<?php echo $course['image'] ?>" alt="">
 
         </div>
 

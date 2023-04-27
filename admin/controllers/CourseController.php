@@ -80,7 +80,7 @@ class CourseController extends BaseController
 
             $this->courseModel->editCourse($id, $name, $duration, $price, $update_filename, $description);
             $tempname = $_FILES['image']['tmp_name'];
-            $folder = "admin/img/uploads";
+            $folder = "uploads";
             if ($_FILES['image']['name']) {
                 move_uploaded_file($tempname, $folder . '/' . $update_filename);
                 if (file_exists($folder . '/' . $old_image)) {
@@ -112,7 +112,7 @@ class CourseController extends BaseController
             $image_ext = pathinfo($image, PATHINFO_EXTENSION);
             $filename = time() . "." . $image_ext;
             $tempname = $_FILES['image']['tmp_name'];
-            $folder = "admin/img/uploads/$filename";
+            $folder = "uploads/$filename";
             $description = $_POST['description'];
             $this->courseModel->addCourse($name, $subject, $duration, $price, $filename, $description);
             move_uploaded_file($tempname, $folder);

@@ -40,7 +40,7 @@
 													<article class="tg-themepost tg-course">
 														<figure class="tg-featuredimg">
 															<a href="javascript:void(0);">
-																<img src="<?= $course['image']; ?>" alt="image description">
+																<img src="<?=PATH_URL . "uploads/". $course['image']; ?>" alt="image description">
 															</a>
 														</figure>
 														<div class="tg-themepostcontent">
@@ -105,6 +105,7 @@
 												<i class="icon-book"></i>
 												<input type="search" name="keyword" class="form-control" placeholder="Keyword">
 											</div>
+											<select>
 															<?php foreach ($data['subjects'] as $subject) : ?>
 															<option value=""><?= $subject['name'] ?></option>
 															<?php endforeach; ?>

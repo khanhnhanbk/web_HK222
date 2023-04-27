@@ -24,7 +24,7 @@
             <input name="image" class="form-control" type="file" id="image">
             <label for="">Current Image</label>
             <input type="hidden" name="old_image" value="<?php echo $course['image'] ?>">
-            <img class="mt-2" height="50px" src="/public/admin/img/uploads/<?php echo $course['image'] ?>" alt="">
+            <img class="mt-2" height="50px" src="/public/uploads/<?php echo $course['image'] ?>" alt="">
         </div>
         <div class="form-group">
             <label for="description" class="form-control-label">Description</label>
